@@ -1,0 +1,1988 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VITAGRAIN — Cabinet conseil et fabricant agréé d'aliments pour animaux d'élevage</title>
+<meta name="description" content="VITAGRAIN — Cabinet conseil et fabricant agréé d'aliments composés pour animaux d'élevage en Côte d'Ivoire. Audit, formulation, accompagnement terrain : volailles, porcs, lapins, ruminants, aquaculture." />
+<meta name="keywords" content="nutrition animale Côte d'Ivoire, consultant élevage Abidjan, formulation provende Afrique, audit nutritionnel élevage tropical, fabricant aliment agréé CI, tilapia porc volaille consultant" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,500&family=DM+Sans:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css" />
+
+<style>
+  :root {
+    --vg-green-dark: #1B6B2F;
+    --vg-green-darker: #0A3A17;
+    --vg-green-mid: #2D9A45;
+    --vg-green-light: #6BBF3A;
+    --vg-gold: #F5C400;
+    --vg-orange: #E07820;
+    --vg-blue: #2A6DB5;
+    --vg-white: #F9F8F4;
+    --vg-cream: #F2EFE5;
+    --vg-text: #2C2C2A;
+    --vg-muted: #5F5E5A;
+    --vg-border: #E6E2D6;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    color: var(--vg-text);
+    background: var(--vg-white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; line-height: 1.15; letter-spacing: -0.01em; }
+
+  a { color: inherit; text-decoration: none; }
+
+  .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+  /* ========== NAV ========== */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 14px 0;
+    transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+    background: rgba(249, 248, 244, 0.0);
+  }
+  .nav.scrolled {
+    background: rgba(249, 248, 244, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+    padding: 10px 0;
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .logo {
+    display: inline-flex; flex-direction: column; align-items: center;
+    gap: 4px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 9px 16px 7px;
+    box-shadow: 0 6px 18px rgba(10,58,23,0.22);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, padding 0.3s ease;
+  }
+  .logo-lockup {
+    display: block; width: 210px; height: auto;     /* real flyer logo, ~50% larger */
+    transition: width 0.3s ease;
+  }
+  .logo-tag {
+    font-family: 'DM Sans', sans-serif; font-weight: 700; font-style: normal;
+    font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--vg-green-dark); line-height: 1;
+    transition: font-size 0.3s ease;
+  }
+  .logo:hover { transform: translateY(-1px); box-shadow: 0 9px 24px rgba(10,58,23,0.28); }
+
+  .nav.scrolled .logo {
+    padding: 6px 13px 5px;
+    box-shadow: 0 2px 8px rgba(10,58,23,0.16);
+  }
+  .nav.scrolled .logo-lockup { width: 190px; }
+  .nav.scrolled .logo-tag { font-size: 10px; }
+
+  .nav-links { display: flex; align-items: center; gap: 26px; list-style: none; }
+  .nav-links a { white-space: nowrap; }
+  .nav-links a {
+    font-size: 0.92rem; font-weight: 500;
+    color: var(--vg-white); opacity: 0.85;
+    position: relative; padding: 6px 0;
+    transition: opacity 0.2s ease, color 0.2s ease;
+  }
+  .nav.scrolled .nav-links a { color: var(--vg-text); opacity: 0.78; }
+  .nav-links a:hover { opacity: 1; }
+  .nav-links a::after {
+    content: ''; position: absolute; left: 0; bottom: 0;
+    width: 0; height: 2px; background: var(--vg-green-mid);
+    transition: width 0.25s ease;
+  }
+  .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+
+  .nav-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--vg-orange); color: white;
+    padding: 10px 18px; border-radius: 999px;
+    font-size: 0.88rem; font-weight: 600;
+    box-shadow: 0 4px 14px rgba(224, 120, 32, 0.35);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(224, 120, 32, 0.45); }
+  .nav-cta i { font-size: 16px; }
+  .nav-cta--dual { padding: 7px 16px; gap: 9px; cursor: default; }
+  .nav-cta--dual:hover { transform: none; box-shadow: 0 4px 14px rgba(224, 120, 32, 0.35); }
+  .nav-cta-nums { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.18; gap: 1px; }
+  .nav-cta-nums a { color: #fff; font-size: 0.76rem; font-weight: 600; white-space: nowrap; }
+  .nav-cta-nums a:hover { text-decoration: underline; }
+
+  .nav-mobile { display: none; }
+  .nav-burger { display: none; background: transparent; border: none; color: var(--vg-white); cursor: pointer; padding: 6px; }
+  .nav.scrolled .nav-burger { color: var(--vg-text); }
+  .nav-burger i { font-size: 26px; }
+
+  /* ========== HERO ========== */
+  .hero {
+    position: relative; min-height: 100vh;
+    overflow: hidden; padding: 130px 24px 180px;
+    color: white;
+    display: flex; align-items: center;
+  }
+  .hero-inner {
+    position: relative; z-index: 3;
+    max-width: 1240px; margin: 0 auto; width: 100%;
+    display: grid; grid-template-columns: 1.05fr 0.95fr;
+    gap: 56px; align-items: center;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse at 70% 30%, rgba(107, 191, 58, 0.35), transparent 55%),
+      radial-gradient(ellipse at 20% 80%, rgba(245, 196, 0, 0.18), transparent 60%),
+      linear-gradient(135deg, var(--vg-green-dark) 0%, var(--vg-green-darker) 100%);
+  }
+  /* SVG stripey placeholder field */
+  .hero-pattern {
+    position: absolute; inset: 0; z-index: 1; opacity: 0.18;
+    background-image:
+      repeating-linear-gradient(115deg, transparent 0 28px, rgba(255,255,255,0.05) 28px 30px),
+      repeating-linear-gradient(25deg, transparent 0 60px, rgba(0,0,0,0.08) 60px 62px);
+  }
+  .hero-vignette {
+    position: absolute; inset: 0; z-index: 1;
+    background: radial-gradient(ellipse at center, transparent 30%, rgba(10, 58, 23, 0.55) 100%);
+  }
+
+  .hero-content { position: relative; z-index: 3; }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.78rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--vg-gold);
+    padding: 6px 14px; border: 1px solid rgba(245, 196, 0, 0.4);
+    border-radius: 999px; margin-bottom: 22px;
+    background: rgba(245, 196, 0, 0.06);
+  }
+  .hero-eyebrow i { font-size: 14px; }
+
+  .hero h1 {
+    font-size: clamp(2.1rem, 4.6vw, 3.8rem);
+    color: white; margin-bottom: 22px;
+    text-wrap: balance;
+  }
+  .hero h1 .accent { color: var(--vg-gold); font-style: italic; }
+  .hero h1.hero-title { text-align: center; font-size: clamp(2.2rem, 4.8vw, 3.6rem); }
+
+  .hero-sub {
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    max-width: 580px; margin: 0 0 36px;
+    color: rgba(255,255,255,0.85); line-height: 1.6;
+    text-wrap: pretty;
+  }
+
+  .hero-cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-reassure {
+    margin-top: 22px; font-size: 0.85rem; font-weight: 500;
+    color: rgba(255,255,255,0.82); letter-spacing: 0.01em;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .hero-reassure i { color: var(--vg-green-light); font-size: 16px; }
+
+  /* Hero image (right column) */
+  .hero-image {
+    position: relative;
+    width: 100%; max-width: 540px; justify-self: end;
+    display: flex; flex-direction: column; gap: 18px;
+  }
+  .hero-photo { position: relative; }
+  .hero-image-frame {
+    position: relative;
+    width: 100%; aspect-ratio: 16/10;
+    border-radius: 20px; overflow: hidden;
+    border: 4px solid rgba(255,255,255,0.92);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+  }
+  .hero-image-frame img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .hero-photo .badge-float {
+    position: absolute; right: -14px; top: -14px; z-index: 5;
+    background: var(--vg-gold); color: var(--vg-green-dark);
+    padding: 10px 16px; border-radius: 999px;
+    font-size: 0.74rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    box-shadow: 0 8px 24px rgba(245, 196, 0, 0.45);
+    display: inline-flex; align-items: center; gap: 6px;
+    transform: rotate(6deg);
+  }
+  .hero-photo .caption {
+    position: absolute; left: 16px; bottom: 16px; z-index: 4;
+    background: rgba(10, 58, 23, 0.78);
+    color: white;
+    padding: 10px 14px; border-radius: 10px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    max-width: calc(100% - 32px);
+  }
+  .hero-photo .caption .caption-title {
+    font-family: 'DM Sans', sans-serif; font-weight: 700;
+    font-size: 0.88rem; letter-spacing: 0.04em;
+    color: var(--vg-gold);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .hero-photo .caption .caption-sub {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.85);
+    margin-top: 2px;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 26px; border-radius: 8px;
+    font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.95rem;
+    cursor: pointer; border: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+  }
+  .btn-primary {
+    background: var(--vg-green-mid); color: white;
+    box-shadow: 0 6px 20px rgba(45, 154, 69, 0.4);
+  }
+  .btn-primary:hover { background: var(--vg-green-light); transform: translateY(-2px); }
+  .btn-ghost {
+    background: transparent; color: white;
+    border: 1.5px solid rgba(255,255,255,0.6);
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,0.1); border-color: white; }
+
+  /* KPI strip */
+  .kpi-strip {
+    position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+    z-index: 4; width: calc(100% - 48px); max-width: 880px;
+    background: rgba(255,255,255,0.10);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 16px;
+    padding: 22px 32px;
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+  }
+  .kpi { text-align: center; position: relative; }
+  .kpi + .kpi::before {
+    content: ''; position: absolute; left: -12px; top: 12%; bottom: 12%;
+    width: 1px; background: rgba(255,255,255,0.2);
+  }
+  .kpi-value {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+    color: var(--vg-gold); line-height: 1;
+    letter-spacing: 0.02em;
+  }
+  .kpi-label {
+    margin-top: 8px; font-size: 0.78rem; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: rgba(255,255,255,0.82);
+  }
+
+  /* ========== SECTIONS ========== */
+  section { padding: 110px 0; position: relative; }
+  .section-head { max-width: 760px; margin: 0 auto 56px; text-align: center; }
+  .section-kicker {
+    display: inline-block; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--vg-green-mid); margin-bottom: 14px;
+  }
+  .section-title { font-size: clamp(1.9rem, 3.5vw, 2.8rem); margin-bottom: 14px; color: var(--vg-green-dark); text-wrap: balance; }
+  .section-sub { font-size: 1.05rem; color: var(--vg-muted); line-height: 1.65; text-wrap: pretty; }
+
+  /* ========== APPROCHE ========== */
+  .approche { background: var(--vg-cream); }
+  .approche-intro { max-width: 860px; margin: 0 auto 52px; text-align: center; }
+  .approche-intro .section-title { color: var(--vg-green-dark); margin-bottom: 20px; }
+  .approche-intro p { font-size: 1.08rem; color: var(--vg-text); line-height: 1.7; text-wrap: pretty; }
+  .approche-cols {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 28px;
+    max-width: 980px; margin: 0 auto;
+  }
+  .approche-col {
+    background: white; border: 1px solid var(--vg-border);
+    border-radius: 18px; padding: 34px 32px;
+    border-left: 4px solid var(--vg-green-mid);
+  }
+  .approche-icon {
+    width: 56px; height: 56px; border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(45,154,69,0.10); color: var(--vg-green-dark);
+    margin-bottom: 20px;
+  }
+  .approche-icon i { font-size: 28px; }
+  .approche-col h3 {
+    font-family: 'DM Sans', sans-serif; font-weight: 600;
+    font-size: 1.22rem; color: var(--vg-green-dark); margin-bottom: 10px;
+    letter-spacing: -0.005em;
+  }
+  .approche-col p { font-size: 0.98rem; color: var(--vg-muted); line-height: 1.65; text-wrap: pretty; }
+  .approche-tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
+  .approche-chip {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: rgba(45,154,69,0.09); color: var(--vg-green-dark);
+    border-radius: 999px; padding: 7px 13px;
+    font-size: 0.82rem; font-weight: 600;
+  }
+  .approche-chip i { font-size: 16px; color: var(--vg-green-mid); }
+  @media (max-width: 720px) {
+    .approche-cols { grid-template-columns: 1fr; }
+  }
+
+  /* ========== SERVICES ========== */
+  .services { background: var(--vg-white); }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  }
+  .service-card {
+    background: white; border-radius: 18px; padding: 30px 26px 28px;
+    border: 1px solid var(--vg-border);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    display: flex; flex-direction: column;
+    position: relative; overflow: hidden;
+  }
+  .service-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--accent, var(--vg-green-mid));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(27, 107, 47, 0.12);
+    border-color: transparent;
+  }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-icon {
+    width: 58px; height: 58px; border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 22px;
+    background: var(--accent, var(--vg-green-mid));
+    color: white;
+  }
+  .service-card[data-accent="gold"] .service-icon { background: var(--vg-gold); color: var(--vg-green-dark); }
+  .service-card[data-accent="orange"] .service-icon { background: var(--vg-orange); color: white; }
+  .service-card[data-accent="blue"] .service-icon { background: var(--vg-blue); color: white; }
+  .service-icon i { font-size: 28px; }
+  .service-card h3 {
+    font-family: 'DM Sans', sans-serif; font-weight: 600;
+    font-size: 1.18rem; margin-bottom: 10px; color: var(--vg-text);
+    letter-spacing: -0.005em;
+  }
+  .service-card p { font-size: 0.92rem; color: var(--vg-muted); line-height: 1.65; flex: 1; }
+  .service-card .more {
+    margin-top: 18px; font-size: 0.88rem; font-weight: 600;
+    color: var(--vg-green-dark);
+    display: inline-flex; align-items: center; gap: 6px;
+    transition: gap 0.2s ease;
+  }
+  .service-card:hover .more { gap: 10px; }
+
+  /* ========== METHODE ========== */
+  .methode { background: var(--vg-cream); }
+  .methode-steps {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px;
+    position: relative;
+  }
+  .methode-steps::before {
+    content: ''; position: absolute; top: 27px; left: 12.5%; right: 12.5%;
+    height: 2px; background: var(--vg-border); z-index: 0;
+  }
+  .methode-step {
+    position: relative; z-index: 1;
+    display: flex; flex-direction: column; align-items: flex-start;
+  }
+  .methode-num {
+    width: 54px; height: 54px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--vg-green-dark); color: white;
+    margin-bottom: 22px;
+    box-shadow: 0 0 0 6px var(--vg-cream);
+  }
+  .methode-num i { font-size: 24px; }
+  .methode-step .step-index {
+    font-family: 'Bebas Neue', sans-serif; font-size: 0.95rem;
+    letter-spacing: 0.12em; color: var(--vg-green-mid); margin-bottom: 6px;
+  }
+  .methode-step h3 {
+    font-family: 'DM Sans', sans-serif; font-weight: 600;
+    font-size: 1.1rem; color: var(--vg-text); margin-bottom: 8px;
+    letter-spacing: -0.005em;
+  }
+  .methode-step p { font-size: 0.9rem; color: var(--vg-muted); line-height: 1.6; text-wrap: pretty; }
+  @media (max-width: 860px) {
+    .methode-steps { grid-template-columns: repeat(2, 1fr); gap: 32px 28px; }
+    .methode-steps::before { display: none; }
+  }
+  @media (max-width: 520px) {
+    .methode-steps { grid-template-columns: 1fr; }
+  }
+
+  /* ========== MISSIONS ========== */
+  .missions { background: var(--vg-white); }
+  .missions-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
+  }
+  .mission-card {
+    background: white; border-radius: 18px; padding: 30px 28px;
+    border: 1px solid var(--vg-border);
+    border-top: 4px solid var(--vg-green-mid);
+    display: flex; flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .mission-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(10,58,23,0.10); }
+  .mission-head { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+  .flag {
+    width: 36px; height: 26px; border-radius: 4px; overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.18); flex-shrink: 0;
+    display: flex;
+  }
+  .flag span { flex: 1; height: 100%; }
+  .flag.horizontal { flex-direction: column; }
+  .flag-ci span:nth-child(1) { background: #F77F00; }
+  .flag-ci span:nth-child(2) { background: #fff; }
+  .flag-ci span:nth-child(3) { background: #009E60; }
+  .flag-ml span:nth-child(1) { background: #14B53A; }
+  .flag-ml span:nth-child(2) { background: #FCD116; }
+  .flag-ml span:nth-child(3) { background: #CE1126; }
+  .flag-ga span:nth-child(1) { background: #009E60; }
+  .flag-ga span:nth-child(2) { background: #FCD116; }
+  .flag-ga span:nth-child(3) { background: #3A75C4; }
+  .mission-country {
+    font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 0.92rem;
+    letter-spacing: 0.04em; text-transform: uppercase; color: var(--vg-green-dark);
+  }
+  .mission-card h3 {
+    font-family: 'DM Sans', sans-serif; font-weight: 600;
+    font-size: 1.14rem; color: var(--vg-text); margin-bottom: 22px;
+    letter-spacing: -0.005em; line-height: 1.35;
+  }
+  .mission-result {
+    margin-top: auto;
+    background: rgba(45,154,69,0.07);
+    border-radius: 12px; padding: 16px 18px;
+    display: flex; align-items: flex-start; gap: 12px;
+  }
+  .mission-result i { color: var(--vg-green-mid); font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+  .mission-result span { font-size: 0.96rem; font-weight: 600; color: var(--vg-green-dark); line-height: 1.45; }
+  @media (max-width: 860px) {
+    .missions-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+  }
+
+  /* ========== FILIERES ========== */
+  .filieres {
+    background: var(--vg-green-darker);
+    color: white;
+    padding: 90px 0;
+    overflow: hidden;
+  }
+  .filieres .section-head { margin-bottom: 40px; }
+  .filieres .section-title { color: white; }
+  .filieres .section-kicker { color: var(--vg-gold); }
+  .filieres .section-sub { color: rgba(255,255,255,0.75); }
+
+  .filieres-row {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 16px;
+  }
+  .pill {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 14px 22px; border-radius: 999px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.14);
+    font-size: 0.95rem; font-weight: 500;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    cursor: default;
+  }
+  .pill:hover { transform: translateY(-3px); background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.28); }
+  .pill .swatch {
+    width: 28px; height: 28px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--swatch, var(--vg-green-mid)); color: white;
+    flex-shrink: 0;
+  }
+  .pill .swatch i { font-size: 16px; }
+  .pill[data-color="blue"] .swatch { background: var(--vg-blue); }
+  .pill[data-color="orange"] .swatch { background: var(--vg-orange); }
+  .pill[data-color="cream"] .swatch { background: #C8C4B0; color: var(--vg-green-dark); }
+  .pill[data-color="emerald"] .swatch { background: #1F8A5B; }
+
+  /* ========== EXPERT ========== */
+  .expert { background: var(--vg-cream); }
+  .expert-grid {
+    display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px;
+    align-items: start;
+  }
+  .expert-photo {
+    position: relative; aspect-ratio: 4/5;
+    border-radius: 20px; overflow: hidden;
+    background: linear-gradient(135deg, var(--vg-green-dark), var(--vg-green-darker));
+    box-shadow: 0 20px 50px rgba(27, 107, 47, 0.15);
+  }
+  .expert-photo img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center 30%;
+    display: block;
+  }
+  .expert-photo .badge {
+    position: absolute; top: 20px; right: 20px;
+    background: var(--vg-gold); color: var(--vg-green-dark);
+    padding: 10px 16px; border-radius: 999px;
+    font-weight: 700; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+
+  .expert-bio { padding-top: 8px; }
+  .expert-name {
+    font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+    color: var(--vg-green-dark); margin-bottom: 6px;
+  }
+  .expert-title {
+    font-size: 1rem; color: var(--vg-green-mid); font-weight: 600;
+    margin-bottom: 18px; letter-spacing: 0.01em;
+  }
+  .expert-lead {
+    font-family: 'Playfair Display', serif; font-style: italic;
+    font-size: 1.15rem; color: var(--vg-text);
+    line-height: 1.55; margin-bottom: 30px;
+    padding-left: 18px; border-left: 3px solid var(--vg-gold);
+  }
+
+  .timeline { margin-bottom: 30px; }
+  .timeline-item {
+    display: flex; gap: 18px; padding-bottom: 18px;
+    position: relative;
+  }
+  .timeline-item:not(:last-child)::before {
+    content: ''; position: absolute; left: 5px; top: 18px; bottom: 0;
+    width: 2px; background: var(--vg-border);
+  }
+  .timeline-dot {
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--vg-green-mid); margin-top: 6px;
+    box-shadow: 0 0 0 4px rgba(45, 154, 69, 0.15);
+    flex-shrink: 0; z-index: 1;
+  }
+  .timeline-content { flex: 1; }
+  .timeline-date {
+    font-size: 0.78rem; font-weight: 700; color: var(--vg-green-mid);
+    text-transform: uppercase; letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+  .timeline-content p { font-size: 0.97rem; color: var(--vg-text); }
+
+  .creds {
+    display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px;
+  }
+  .cred {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: white; border: 1px solid var(--vg-border);
+    padding: 10px 14px; border-radius: 8px;
+    font-size: 0.85rem; color: var(--vg-text);
+  }
+  .cred i { color: var(--vg-green-mid); font-size: 16px; }
+
+  .expert-meta {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+    padding-top: 20px; border-top: 1px solid var(--vg-border);
+  }
+  .meta-block .meta-label {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--vg-muted); margin-bottom: 6px;
+  }
+  .meta-block .meta-value { font-size: 0.92rem; color: var(--vg-text); }
+
+  /* ========== EQUIPE (2 profils) ========== */
+  .equipe { background: var(--vg-cream); }
+  .equipe-row {
+    display: grid; grid-template-columns: 1fr auto 1fr;
+    align-items: stretch; max-width: 1200px; margin: 0 auto;
+  }
+  .profil-card {
+    background: white; border: 1px solid var(--vg-border);
+    border-radius: 20px; padding: 32px;
+    display: flex; flex-direction: column;
+    box-shadow: 0 14px 40px rgba(10,58,23,0.06);
+  }
+  .profil-card.mentor { border-top: 4px solid var(--vg-gold); }
+  .profil-card.praticien { border-top: 4px solid var(--vg-green-mid); }
+  .profil-photo {
+    position: relative; aspect-ratio: 4/5;
+    border-radius: 16px; overflow: hidden; margin-bottom: 24px;
+    background: linear-gradient(135deg, var(--vg-green-dark), var(--vg-green-darker));
+  }
+  .profil-photo img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center 22%;
+    display: block;
+  }
+  .profil-photo .badge {
+    position: absolute; top: 16px; left: 16px;
+    background: var(--vg-gold); color: var(--vg-green-dark);
+    padding: 8px 14px; border-radius: 999px;
+    font-weight: 700; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .profil-card.praticien .profil-photo .badge { background: var(--vg-green-mid); color: white; }
+  .profil-name {
+    font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+    color: var(--vg-green-dark); margin-bottom: 6px;
+  }
+  .profil-title {
+    font-size: 0.95rem; color: var(--vg-green-mid); font-weight: 600;
+    line-height: 1.45; margin-bottom: 16px;
+  }
+  .profil-mentor-note {
+    background: rgba(45,154,69,0.09);
+    border-radius: 10px; padding: 12px 16px; margin-bottom: 18px;
+    font-style: italic; font-size: 0.9rem; color: var(--vg-green-dark); line-height: 1.5;
+  }
+  .profil-lead {
+    font-family: 'Playfair Display', serif; font-style: italic;
+    font-size: 1.06rem; color: var(--vg-text); line-height: 1.5;
+    padding-left: 16px; border-left: 3px solid var(--vg-gold);
+    margin-bottom: 26px;
+  }
+  .profil-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .profil-tag {
+    background: rgba(45,154,69,0.08); color: var(--vg-green-dark);
+    border-radius: 999px; padding: 6px 14px; font-size: 0.8rem; font-weight: 600;
+  }
+  .equipe-connect {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    width: 156px; gap: 16px; padding: 0 16px;
+  }
+  .connect-line {
+    width: 2px; flex: 1; min-height: 44px;
+    background: linear-gradient(var(--vg-gold), rgba(245,196,0,0.05));
+  }
+  .connect-line.bottom { background: linear-gradient(rgba(245,196,0,0.05), var(--vg-gold)); }
+  .connect-icon {
+    width: 60px; height: 60px; border-radius: 50%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: white; border: 2px solid var(--vg-gold); color: #C79A00;
+    box-shadow: 0 8px 22px rgba(245,196,0,0.28);
+  }
+  .connect-icon i { font-size: 26px; }
+  .connect-text {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em;
+    color: #A87E00; text-align: center; line-height: 1.5; text-transform: uppercase;
+  }
+  @media (max-width: 960px) {
+    .equipe-row { grid-template-columns: 1fr; }
+    .equipe-connect { width: auto; flex-direction: row; padding: 26px 0; }
+    .connect-line {
+      width: auto; height: 2px; min-height: 0; flex: 1;
+      background: linear-gradient(90deg, rgba(245,196,0,0.05), var(--vg-gold));
+    }
+    .connect-line.bottom { background: linear-gradient(90deg, var(--vg-gold), rgba(245,196,0,0.05)); }
+  }
+
+  /* ========== PRODUITS ========== */
+  .produits { background: var(--vg-white); }
+  .produits-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px;
+  }
+  .produit-card {
+    border-radius: 18px; overflow: hidden;
+    border: 1px solid var(--vg-border);
+    background: white;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex; flex-direction: column;
+  }
+  .produit-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(0,0,0,0.08); }
+
+  .produit-image {
+    position: relative; aspect-ratio: 1/1.18;
+    overflow: hidden;
+    background: var(--bag-color, var(--vg-cream));
+  }
+  .produit-image img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s ease;
+  }
+  .produit-card:hover .produit-image img { transform: scale(1.03); }
+  .produit-badge {
+    position: absolute; top: 14px; right: 14px;
+    background: var(--bag-color, var(--vg-green-dark));
+    color: white; padding: 6px 12px; border-radius: 999px;
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  }
+  .produit-card[data-color="cream"] .produit-badge { background: var(--vg-green-dark); }
+
+  .produit-body { padding: 22px 22px 24px; }
+  .produit-title {
+    font-family: 'Playfair Display', serif; font-weight: 700;
+    font-size: 1.35rem; color: var(--vg-green-dark);
+    margin-bottom: 4px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .produit-title::before {
+    content: ''; width: 10px; height: 10px; border-radius: 50%;
+    background: var(--bag-color, var(--vg-green-mid)); flex-shrink: 0;
+  }
+  .produit-subtitle {
+    font-size: 0.82rem; color: var(--vg-muted);
+    margin-bottom: 14px; padding-left: 20px;
+  }
+  .produit-body h4 {
+    font-family: 'DM Sans', sans-serif; font-weight: 600;
+    font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--vg-muted); margin-bottom: 10px;
+    padding-top: 14px; border-top: 1px solid var(--vg-border);
+  }
+  .produit-body ul { list-style: none; }
+  .produit-body li {
+    font-size: 0.9rem; color: var(--vg-text); padding: 6px 0;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .produit-body li i { color: var(--vg-green-mid); font-size: 14px; }
+
+  .produits-foot {
+    margin-top: 40px;
+    background: var(--vg-cream);
+    border-radius: 16px;
+    padding: 22px 28px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px; flex-wrap: wrap;
+  }
+  .produits-foot-text { font-size: 0.95rem; color: var(--vg-text); }
+  .produits-foot-text strong { color: var(--vg-green-dark); }
+  .produits-foot-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  /* ===== À PROPOS ===== */
+  .apropos-layout { display:grid; grid-template-columns: 1fr 360px; gap:48px; align-items:start; max-width:1100px; margin:0 auto; }
+  .apropos-text p { margin-bottom:16px; line-height:1.75; color:var(--vg-text); font-size:1.04rem; }
+  .apropos-sub { font-family:'DM Sans',sans-serif; font-weight:700; font-size:1.15rem; color:var(--vg-green-dark); margin:24px 0 12px; }
+  .apropos-list { list-style:none; display:grid; gap:12px; }
+  .apropos-list li { position:relative; padding-left:30px; line-height:1.6; color:var(--vg-text); }
+  .apropos-list li::before { content:'✓'; position:absolute; left:0; top:1px; width:20px; height:20px; border-radius:50%; background:rgba(45,154,69,0.12); color:var(--vg-green-mid); font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center; }
+  .apropos-list strong { color:var(--vg-green-dark); }
+  .apropos-tagline { margin-top:22px; font-style:italic; color:var(--vg-green-dark); border-left:3px solid var(--vg-gold); padding-left:16px; }
+  .apropos-card { background:linear-gradient(160deg, var(--vg-cream), #ffffff); border:1px solid var(--vg-border); border-top:4px solid var(--vg-green-mid); border-radius:18px; padding:28px 26px; text-align:center; box-shadow:0 14px 40px rgba(10,58,23,0.06); position:sticky; top:96px; }
+  .apropos-logo { width:170px; height:auto; margin:0 auto 14px; display:block; }
+  .apropos-card-title { font-family:'DM Sans',sans-serif; font-weight:700; font-size:0.92rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--vg-green-dark); line-height:1.45; margin-bottom:18px; }
+  .apropos-gamme { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-bottom:20px; }
+  .apropos-gamme span { display:inline-flex; align-items:center; gap:6px; background:var(--vg-green-dark); color:#fff; font-size:0.78rem; font-weight:600; padding:6px 12px; border-radius:999px; }
+  .apropos-gamme span i { font-size:14px; color:var(--vg-gold); }
+  .apropos-card-contact { border-top:1px solid var(--vg-border); padding-top:16px; display:grid; gap:8px; font-size:0.85rem; color:var(--vg-text); }
+  .apropos-card-contact div { display:flex; align-items:center; gap:8px; justify-content:center; }
+  .apropos-card-contact i { color:var(--vg-green-mid); font-size:15px; }
+  @media (max-width:860px){ .apropos-layout{ grid-template-columns:1fr; gap:32px; } .apropos-card{ position:static; max-width:420px; margin:0 auto; } }
+
+  /* ===== CARROUSEL EXPERTS ===== */
+  .equipe-carousel { position:relative; max-width:1240px; margin:0 auto;
+    display:grid; grid-template-columns:repeat(4,1fr); gap:18px; align-items:start; }
+  .expert-slide { display:none; }
+  .expert-slide.active { display:block; animation:fadeSlide .4s ease; }
+  /* 3 experts sur la meme ligne */
+  .equipe-carousel .expert-slide { display:block !important; animation:none; }
+  .equipe-carousel .profil-card { padding:24px 18px; }
+  .equipe-carousel .profil-photo { max-width:54%; margin-left:auto; margin-right:auto; margin-bottom:44px; overflow:visible; }
+  .equipe-carousel .profil-photo img { border-radius:16px; }
+  /* badge sous la photo, ne masque plus le visage */
+  .equipe-carousel .profil-photo .badge { top:auto; bottom:-14px; left:50%; right:auto; transform:translateX(-50%); white-space:nowrap; }
+  @keyframes fadeSlide { from{opacity:0; transform:translateX(26px);} to{opacity:1; transform:none;} }
+  .carousel-controls { display:none; }
+  @media (max-width: 1100px) {
+    .equipe-carousel { grid-template-columns:repeat(2,1fr); max-width:760px; }
+  }
+  @media (max-width: 620px) {
+    .equipe-carousel { grid-template-columns:1fr; max-width:420px; }
+    .equipe-carousel .profil-photo { max-width:60%; }
+  }
+  .carousel-btn { width:46px; height:46px; border-radius:50%; border:2px solid var(--vg-green-mid); background:#fff; color:var(--vg-green-dark); cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .2s, color .2s; }
+  .carousel-btn i { font-size:22px; }
+  .carousel-btn:hover { background:var(--vg-green-mid); color:#fff; }
+  .carousel-dots { display:flex; gap:9px; }
+  .carousel-dots .dot { width:10px; height:10px; border-radius:50%; border:2px solid var(--vg-green-mid); background:transparent; cursor:pointer; padding:0; transition:background .2s; }
+  .carousel-dots .dot.active { background:var(--vg-green-mid); }
+
+
+  /* ========== ZONES ========== */
+  .zones { background: var(--vg-cream); }
+  .zones-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+    max-width: 1080px; margin: 0 auto;
+  }
+  .zone-card {
+    background: white; border-radius: 14px;
+    border: 1px solid var(--vg-border);
+    border-top: 3px solid var(--vg-green-mid);
+    text-align: left;
+  }
+  .zone-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.06); }
+  .zone-flag { font-size: 2.2rem; line-height: 1; margin-bottom: 12px; }
+  .zone-name { font-weight: 700; font-size: 1.05rem; color: var(--vg-green-dark); margin-bottom: 6px; }
+  .zone-desc { font-size: 0.88rem; color: var(--vg-muted); line-height: 1.5; }
+    padding: 26px 20px; text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .zone-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.06); }
+  .zone-flag { font-size: 2.2rem; line-height: 1; margin-bottom: 12px; }
+  .zone-name { font-weight: 600; font-size: 1rem; color: var(--vg-text); margin-bottom: 8px; }
+  .zone-status {
+    display: inline-block; font-size: 0.7rem; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 999px;
+  }
+  .zone-status.actif { background: rgba(45, 154, 69, 0.12); color: var(--vg-green-dark); }
+  .zone-status.mission { background: rgba(245, 196, 0, 0.18); color: #8a6a00; }
+  .zone-status.formation { background: rgba(42, 109, 181, 0.12); color: var(--vg-blue); }
+  .zones-banner {
+    max-width: 1080px; margin: 32px auto 0;
+    background: var(--vg-green-dark); color: white;
+    border-radius: 14px; padding: 22px 30px;
+    display: flex; align-items: center; gap: 16px; justify-content: center;
+    text-align: center;
+  }
+  .zones-banner i { font-size: 26px; color: var(--vg-gold); flex-shrink: 0; }
+  .zones-banner strong { font-size: 1.08rem; font-weight: 600; letter-spacing: 0.005em; }
+
+  .zones-layout {
+    display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 40px;
+    align-items: center; max-width: 1080px; margin: 0 auto 0;
+  }
+  .africa-map { position: relative; width: 100%; }
+  .africa-map svg { width: 100%; height: auto; display: block; filter: drop-shadow(0 16px 32px rgba(10,58,23,0.16)); }
+  .map-pin {
+    position: absolute; transform: translate(-50%, -50%);
+    display: flex; flex-direction: column; align-items: center; gap: 5px; z-index: 2;
+  }
+  .map-pin .flag-dot {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: #fff; border: 2.5px solid var(--vg-gold);
+    box-shadow: 0 5px 14px rgba(0,0,0,0.28);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 19px; line-height: 1;
+  }
+  .map-pin .pin-name {
+    background: var(--vg-green-dark); color: #fff;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.01em;
+    padding: 3px 9px; border-radius: 999px; white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.22);
+  }
+  .map-pin.label-top { flex-direction: column-reverse; }
+  .map-pin.label-right { flex-direction: row; }
+  .map-pin.label-left { flex-direction: row-reverse; }
+  .zones-layout .zones-grid { grid-template-columns: 1fr 1fr; max-width: none; margin: 0; }
+  @media (max-width: 820px) {
+    .zones-layout { grid-template-columns: 1fr; gap: 30px; }
+    .africa-map { max-width: 380px; margin: 0 auto; }
+  }
+  @media (max-width: 440px) {
+    .zones-layout .zones-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ========== STATS ========== */
+  .stats {
+    background: var(--vg-green-darker);
+    color: white;
+    padding: 100px 0;
+    position: relative; overflow: hidden;
+  }
+  .stats::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 15% 20%, rgba(107, 191, 58, 0.2), transparent 50%),
+      radial-gradient(ellipse at 85% 80%, rgba(245, 196, 0, 0.12), transparent 55%);
+    pointer-events: none;
+  }
+  .stats-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    position: relative; margin-bottom: 70px;
+  }
+  .stat { text-align: center; padding: 20px 12px; position: relative; }
+  .stat + .stat::before {
+    content: ''; position: absolute; left: -12px; top: 20%; bottom: 20%;
+    width: 1px; background: rgba(255,255,255,0.15);
+  }
+  .stat-value {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.6rem, 5vw, 4rem);
+    color: var(--vg-gold); line-height: 1;
+    letter-spacing: 0.02em; margin-bottom: 10px;
+  }
+  .stat-label {
+    font-size: 0.85rem; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .quote {
+    max-width: 820px; margin: 0 auto; text-align: center;
+    position: relative; padding: 30px 40px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+  .quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem; line-height: 0.5;
+    color: var(--vg-gold); display: block;
+    margin-bottom: 14px;
+  }
+  .quote-text {
+    font-family: 'Playfair Display', serif; font-style: italic;
+    font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+    color: white; line-height: 1.5; text-wrap: balance;
+  }
+  .quote-author {
+    margin-top: 18px; font-size: 0.85rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--vg-gold);
+  }
+
+  /* ========== TEMOIGNAGES ========== */
+  .temoignages {
+    background: var(--vg-green-darker); color: white;
+    overflow: hidden;
+  }
+  .temoignages .section-title { color: white; }
+  .temoignages .section-kicker { color: var(--vg-gold); }
+  .temoignages-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;
+    max-width: 1000px; margin: 0 auto;
+  }
+  .temoignage {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 18px; padding: 38px 36px 32px;
+    position: relative;
+    display: flex; flex-direction: column;
+  }
+  .temoignage .t-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.4rem; line-height: 0.6; color: var(--vg-gold);
+    margin-bottom: 18px; display: block;
+  }
+  .temoignage blockquote {
+    font-family: 'Playfair Display', serif; font-style: italic;
+    font-size: 1.18rem; line-height: 1.55;
+    color: var(--vg-gold); text-wrap: pretty;
+    margin-bottom: 26px;
+  }
+  .temoignage figcaption {
+    margin-top: auto;
+    display: flex; align-items: center; gap: 14px;
+    padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.12);
+  }
+  .t-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(245,196,0,0.14); color: var(--vg-gold);
+    flex-shrink: 0;
+  }
+  .t-avatar i { font-size: 22px; }
+  .t-author { font-weight: 700; font-size: 0.98rem; color: white; }
+  .t-role { font-size: 0.85rem; color: rgba(255,255,255,0.65); }
+  @media (max-width: 760px) {
+    .temoignages-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ========== CONTACT ========== */
+  .contact { background: var(--vg-white); padding: 110px 0; }
+  .contact-grid {
+    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px;
+    align-items: start;
+  }
+  .contact-head { margin-bottom: 32px; }
+  .contact-head .section-kicker { color: var(--vg-green-mid); }
+  .contact-head h2 { color: var(--vg-green-dark); font-size: clamp(1.9rem, 3vw, 2.6rem); margin-bottom: 10px; }
+  .contact-head p { color: var(--vg-muted); font-size: 1.02rem; }
+
+  .form { display: grid; gap: 16px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .field label {
+    display: block; font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--vg-muted); margin-bottom: 6px;
+  }
+  .field input, .field select, .field textarea {
+    width: 100%; padding: 13px 14px; border-radius: 10px;
+    border: 1px solid var(--vg-border); background: white;
+    font-family: inherit; font-size: 0.95rem; color: var(--vg-text);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: none; border-color: var(--vg-green-mid);
+    box-shadow: 0 0 0 3px rgba(45, 154, 69, 0.15);
+  }
+  .field textarea { min-height: 130px; resize: vertical; }
+  .form .btn-primary { justify-content: center; width: 100%; padding: 16px; margin-top: 4px; }
+  .form-success {
+    display: none; padding: 16px 20px; border-radius: 10px;
+    background: rgba(45, 154, 69, 0.1); color: var(--vg-green-dark);
+    font-size: 0.95rem; font-weight: 500;
+    border: 1px solid rgba(45, 154, 69, 0.25);
+  }
+  .form-success.active { display: flex; align-items: center; gap: 10px; }
+
+  .contact-info {
+    background: var(--vg-cream); border-radius: 18px; padding: 32px;
+    border: 1px solid var(--vg-border);
+  }
+  .info-title {
+    font-family: 'Playfair Display', serif; font-weight: 600;
+    font-size: 1.35rem; color: var(--vg-green-dark); margin-bottom: 20px;
+  }
+  .info-list { list-style: none; display: grid; gap: 18px; margin-bottom: 28px; }
+  .info-item { display: flex; gap: 14px; align-items: flex-start; }
+  .info-icon {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: white; border: 1px solid var(--vg-border);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--vg-green-mid); flex-shrink: 0;
+  }
+  .info-icon i { font-size: 18px; }
+  .info-text .info-label {
+    font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--vg-muted); margin-bottom: 2px;
+  }
+  .info-text .info-value { font-size: 0.97rem; color: var(--vg-text); font-weight: 500; }
+  .info-text a:hover { color: var(--vg-green-mid); }
+
+  .social-row {
+    display: flex; gap: 10px;
+    padding-top: 22px; border-top: 1px solid var(--vg-border);
+  }
+  .social {
+    width: 42px; height: 42px; border-radius: 10px;
+    background: white; border: 1px solid var(--vg-border);
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--vg-green-dark); font-size: 18px;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  }
+  .social:hover { background: var(--vg-green-mid); color: white; transform: translateY(-2px); }
+  .social.wa:hover { background: #25D366; }
+  .social.li:hover { background: #0A66C2; }
+
+  /* ========== FOOTER ========== */
+  footer {
+    background: var(--vg-green-darker); color: white;
+    padding: 40px 0; text-align: center;
+  }
+  .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .footer-logo {
+    font-family: 'Playfair Display', serif; font-weight: 700;
+    font-size: 1.4rem; letter-spacing: 0.05em;
+  }
+  .footer-logo .dot { color: var(--vg-gold); font-style: italic; }
+  .footer-tag { font-size: 0.85rem; color: rgba(255,255,255,0.65); }
+  .footer-contact {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 10px 26px; margin-top: 6px;
+    font-size: 0.9rem; color: rgba(255,255,255,0.85);
+  }
+  .footer-contact a {
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: color 0.2s ease;
+  }
+  .footer-contact a:hover { color: var(--vg-gold); }
+  .footer-contact i { color: var(--vg-green-light); font-size: 16px; }
+  .footer-bottom {
+    margin-top: 18px; padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 0.78rem; color: rgba(255,255,255,0.5);
+    width: 100%; max-width: 800px;
+  }
+
+  /* ========== REVEAL ANIMATION ========== */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 960px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+    .hero-content { max-width: 720px; margin: 0 auto; }
+    .hero-sub { margin-left: auto; margin-right: auto; }
+    .hero-cta-row { justify-content: center; }
+    .hero-image { margin: 0 auto; max-width: 520px; justify-self: center; }
+  }
+
+  @media (max-width: 1024px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .produits-grid { grid-template-columns: repeat(2, 1fr); }
+    .zones-grid { grid-template-columns: repeat(3, 1fr); }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 40px 24px; }
+    .stat + .stat::before { display: none; }
+    .stat:nth-child(2)::before, .stat:nth-child(4)::before { content: none; }
+    .expert-grid { grid-template-columns: 1fr; gap: 40px; max-width: 600px; margin: 0 auto; }
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  @media (max-width: 720px) {
+    section { padding: 80px 0; }
+    .nav-links { display: none; }
+    .nav-cta { display: none; }
+    .nav-burger { display: inline-flex; }
+
+    .nav-mobile {
+      position: fixed; top: 60px; left: 0; right: 0;
+      background: white; padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      z-index: 99;
+    }
+    .nav-mobile.open { display: block; }
+    .nav-mobile ul { list-style: none; display: grid; gap: 14px; }
+    .nav-mobile a {
+      display: block; padding: 10px 0; font-size: 1rem; font-weight: 500;
+      color: var(--vg-text); border-bottom: 1px solid var(--vg-border);
+    }
+    .nav-mobile .nav-cta { display: inline-flex; margin-top: 14px; }
+
+    .hero { padding: 100px 24px 280px; }
+    .kpi-strip { grid-template-columns: 1fr; padding: 18px 20px; gap: 14px; bottom: 24px; }
+    .kpi + .kpi::before { content: none; }
+    .kpi { display: flex; align-items: baseline; justify-content: center; gap: 10px; }
+    .kpi-value { font-size: 1.8rem; }
+    .kpi-label { margin-top: 0; }
+
+    .services-grid { grid-template-columns: 1fr; }
+    .produits-grid { grid-template-columns: 1fr; }
+    .zones-grid { grid-template-columns: repeat(2, 1fr); }
+    .stats-grid { gap: 28px 18px; }
+    .quote { padding: 24px 12px; }
+    .expert-meta { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .produits-foot { text-align: center; flex-direction: column; }
+  }
+</style>
+<link id="gfont-Ubuntu" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;600;700&amp;display=swap">
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#hero" class="logo" aria-label="VITAGRAIN — Cabinet Conseil en Nutrition Animale">
+      <img class="logo-lockup" src="images/logo-lockup.png" alt="VITAGRAIN" />
+      <span class="logo-tag">Cabinet conseil et fabricant agréé</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#apropos" class="nav-link">À propos</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#methode" class="nav-link">Méthode</a></li>
+      <li><a href="#missions" class="nav-link">Références</a></li>
+      <li><a href="#expert" class="nav-link">Experts</a></li>
+      <li><a href="#produits" class="nav-link">Gamme produits</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-cta nav-cta--dual">
+      <i class="ti ti-phone" aria-hidden="true"></i>
+      <span class="nav-cta-nums">
+        <a href="tel:+2250707386429">+(225) 07 07 38 64 29</a>
+        <a href="tel:+33744833906">+(33) 7 44 83 39 06</a>
+      </span>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Menu">
+      <i class="ti ti-menu-2"></i>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <ul>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#missions">Références</a></li>
+      <li><a href="#expert">Experts</a></li>
+      <li><a href="#produits">Gamme produits</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta nav-cta--dual">
+      <i class="ti ti-phone"></i>
+      <span class="nav-cta-nums">
+        <a href="tel:+2250707386429">07 07 38 64 29</a>
+        <a href="tel:+33744833906">+(33) 7 44 83 39 06</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<header class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-vignette"></div>
+
+  <div class="hero-inner">
+    <div class="hero-content">
+      <h1 class="hero-title">Conseil en Nutrition Animale Tropicale -Fabricant agréé</h1>
+      <p class="hero-sub">Formulations nutritionnelles sur mesure à partir de matières premières locales. Nos spécialistes se déplacent dans toutes les régions tropicales et équatoriales pour accompagner les éleveurs et développer des solutions adaptées à chaque besoin.</p>
+      <div class="hero-cta-row">
+        <a href="#contact" class="btn btn-primary">Demander un diagnostic gratuit <i class="ti ti-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-ghost"><i class="ti ti-calendar"></i> Prendre rendez-vous</a>
+      </div>
+      <p class="hero-reassure">Volailles · Lapins · Porcs · Ovins &amp; Bovins · Poissons </p>
+    </div>
+
+    <div class="hero-image">
+      <div class="hero-photo">
+        <span class="badge-float"><i class="ti ti-shield-check"></i> Agréé État</span>
+        <div class="hero-image-frame">
+          <img src="images/ferme-integree.jpg" alt="Ferme intégrée — aviculture, pisciculture et porciculture" />
+        </div>
+        <div class="caption">
+          <div class="caption-title"><i class="ti ti-map-pin"></i> Ferme intégrée</div>
+          <div class="caption-sub">Aviculture · Pisciculture · Porciculture</div>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <div class="hero-image-frame">
+          <img src="images/accompagnement-eleveurs.jpg" alt="Accompagnement des éleveurs — visite terrain et conseil VITAGRAIN" />
+        </div>
+        <div class="caption">
+          <div class="caption-title"><i class="ti ti-users"></i> Accompagnement des éleveurs</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kpi-strip">
+    <div class="kpi">
+      <div class="kpi-value" data-count="1000" data-suffix="+">0</div>
+      <div class="kpi-label">Éleveurs accompagnés</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-value" data-count="120" data-suffix=" T">0</div>
+      <div class="kpi-label">Aliments produits / mois</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-value" data-count="20" data-suffix=" ans">0</div>
+      <div class="kpi-label">D'expérience cumulée</div>
+    </div>
+  </div>
+</header>
+
+<!-- ========== À PROPOS ========== -->
+<section class="apropos" id="apropos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">À propos de VITAGRAIN</span>
+      <h2 class="section-title">L'innovation au service de l'alimentation animale durable</h2>
+    </div>
+    <div class="apropos-layout reveal">
+      <div class="apropos-text">
+        <p>Vitagrain est une entreprise spécialisée dans la fabrication d'aliments composés pour animaux d'élevage, adaptés aux conditions tropicales. En s'appuyant sur l'expertise de nutritionnistes africains et une collaboration étroite avec les acteurs locaux, nous mettons au point des formulations nutritionnelles de haute qualité, principalement à partir de matières premières locales.</p>
+        <p>Notre approche repose sur une valorisation intelligente des ressources disponibles : sous-produits agricoles et résidus d'usines agro-alimentaires pour créer des aliments riches et équilibrés, tout en contribuant à la sécurité alimentaire et à une économie circulaire.</p>
+        <h3 class="apropos-sub">Ce qui nous distingue</h3>
+        <ul class="apropos-list">
+          <li><strong>Production locale et durable :</strong> matières premières issues directement des zones où nous opérons, renforçant les économies locales.</li>
+          <li><strong>Diversité des produits :</strong> gamme complète d'aliments composés — volailles, lapins, porcs, ovins &amp; bovins, poissons.</li>
+          <li><strong>Savoir-faire terrain :</strong> nos spécialistes se déplacent dans toutes les régions tropicales et équatoriales pour accompagner les éleveurs et développer des solutions sur mesure.</li>
+        </ul>
+        <p class="apropos-tagline"><em>Vitagrain, c'est l'assurance de grains en or pour vos animaux — une solution innovante, durable et bénéfique pour votre rentabilité.</em></p>
+      </div>
+      <aside class="apropos-card">
+        <img src="images/logo-lockup.png" alt="VITAGRAIN" class="apropos-logo" />
+        <p class="apropos-card-title">L'innovation au service de l'alimentation animale</p>
+        <div class="apropos-gamme">
+          <span><i class="ti ti-egg"></i> Volailles</span>
+          <span><i class="ti ti-paw"></i> Lapins</span>
+          <span><i class="ti ti-meat"></i> Porcs</span>
+          <span><i class="ti ti-cow"></i> Ovins &amp; Bovins</span>
+          <span><i class="ti ti-fish"></i> Poissons</span>
+        </div>
+        <div class="apropos-card-contact">
+          <div><i class="ti ti-mail"></i> info@vitagrainnutrition.com</div>
+          <div><i class="ti ti-world"></i> vitagrainnutrition.com</div>
+          <div><i class="ti ti-brand-whatsapp"></i> +(225) 07 07 38 64 29</div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ========== APPROCHE ========== -->
+<section class="approche" id="approche">
+  <div class="container">
+    <div class="approche-intro reveal">
+      <h2 class="section-title">L'innovation au service d'un élevage tropical durable et rentable</h2>
+      <p>Vitagrain valorise intelligemment les ressources locales disponibles : sous-produits agricoles et résidus agro-alimentaires pour créer des aliments équilibrés, accessibles et adaptés aux conditions tropicales. Une démarche circulaire qui renforce les économies locales tout en maximisant les performances de vos élevages.</p>
+    </div>
+
+    <div class="approche-cols">
+      <div class="approche-col reveal">
+        <div class="approche-icon"><i class="ti ti-recycle"></i></div>
+        <h3>Production locale &amp; durable</h3>
+        <p>Matières premières sourcées directement dans les zones d'intervention, pour des formulations compétitives.</p>
+        <div class="approche-tags">
+          <span class="approche-chip"><i class="ti ti-plant-2"></i> Maïs</span>
+          <span class="approche-chip"><i class="ti ti-seeding"></i> Manioc &amp; céréales</span>
+          <span class="approche-chip"><i class="ti ti-fish"></i> Tourteaux &amp; protéines</span>
+          <span class="approche-chip"><i class="ti ti-leaf"></i> Sous-produits agricoles</span>
+        </div>
+      </div>
+      <div class="approche-col reveal">
+        <div class="approche-icon"><i class="ti ti-map-pin"></i></div>
+        <h3>Expertise terrain mobilisable</h3>
+        <p>Nos consultants se déplacent dans toute l'Afrique tropicale — Côte d'Ivoire, Mali, Burkina Faso, Gabon et au-delà.</p>
+        <div class="approche-tags">
+          <span class="approche-chip"><i class="ti ti-plane"></i> Déplacements</span>
+          <span class="approche-chip"><i class="ti ti-map-2"></i> 4 pays couverts</span>
+          <span class="approche-chip"><i class="ti ti-users"></i> Équipe terrain</span>
+          <span class="approche-chip"><i class="ti ti-message-2"></i> Conseil sur site</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">Nos expertises</span>
+      <h2 class="section-title">Un accompagnement, du diagnostic à la performance</h2>
+      <p class="section-sub">Une offre intégrée pensée pour les réalités économiques et zootechniques des filières tropicales - terrain, données, et formation.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card reveal" data-accent="green">
+        <div class="service-icon"><i class="ti ti-clipboard-check"></i></div>
+        <h3>Audit Nutritionnel</h3>
+        <p>Diagnostic complet de vos rations et performances zootechniques. Identification des déséquilibres et recommandations correctrices, chiffrées et priorisées.</p>
+        <a href="#contact" class="more">En savoir plus <i class="ti ti-arrow-right"></i></a>
+      </article>
+
+      <article class="service-card reveal" data-accent="gold">
+        <div class="service-icon"><i class="ti ti-flask"></i></div>
+        <h3>Formulation sur Mesure</h3>
+        <p>Conception de provendes adaptées aux matières premières locales disponibles. Outils professionnels : Hybrimin, NutrAnim, Feed Access.</p>
+        <a href="#contact" class="more">En savoir plus <i class="ti ti-arrow-right"></i></a>
+      </article>
+
+      <article class="service-card reveal" data-accent="orange">
+        <div class="service-icon"><i class="ti ti-school"></i></div>
+        <h3>Formation & Renforcement</h3>
+        <p>Programmes pour techniciens, ingénieurs agronomes et éleveurs. Approche andragogique pour une autonomisation post-formation durable.</p>
+        <a href="#contact" class="more">En savoir plus <i class="ti ti-arrow-right"></i></a>
+      </article>
+
+      <article class="service-card reveal" data-accent="blue">
+        <div class="service-icon"><i class="ti ti-map-pin"></i></div>
+        <h3>Suivi Terrain</h3>
+        <p>Accompagnement régulier sur site. Indicateurs zootechniques, ajustements de rations et conseils vétérinaires nutritionnels au plus près des élevages.</p>
+        <a href="#contact" class="more">En savoir plus <i class="ti ti-arrow-right"></i></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== METHODE ========== -->
+<section class="methode" id="methode">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">Notre méthode</span>
+      <h2 class="section-title">Comment se déroule une mission ?</h2>
+    </div>
+
+    <div class="methode-steps">
+      <div class="methode-step reveal">
+        <div class="methode-num"><i class="ti ti-phone-call"></i></div>
+        <span class="step-index">Étape 01</span>
+        <h3>Prise de contact</h3>
+        <p>Échange de 30 min pour cadrer votre besoin et vos objectifs.</p>
+      </div>
+      <div class="methode-step reveal">
+        <div class="methode-num"><i class="ti ti-stethoscope"></i></div>
+        <span class="step-index">Étape 02</span>
+        <h3>Diagnostic terrain</h3>
+        <p>Visite et analyse complète de vos rations, performances et pratiques.</p>
+      </div>
+      <div class="methode-step reveal">
+        <div class="methode-num"><i class="ti ti-target-arrow"></i></div>
+        <span class="step-index">Étape 03</span>
+        <h3>Plan d'action chiffré</h3>
+        <p>Recommandations priorisées avec objectifs mesurables.</p>
+      </div>
+      <div class="methode-step reveal">
+        <div class="methode-num"><i class="ti ti-refresh"></i></div>
+        <span class="step-index">Étape 04</span>
+        <h3>Suivi &amp; ajustements</h3>
+        <p>Accompagnement régulier jusqu'aux résultats.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MISSIONS ========== -->
+<section class="missions" id="missions">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">Études de cas</span>
+      <h2 class="section-title">Missions réalisées</h2>
+      <p class="section-sub">Des résultats mesurables sur le terrain, au service d'éleveurs et d'agro-industriels d'Afrique de l'Ouest et centrale.</p>
+    </div>
+
+    <div class="missions-grid">
+      <article class="mission-card reveal">
+        <div class="mission-head">
+          <span class="flag flag-ci"><span></span><span></span><span></span></span>
+          <span class="mission-country">Côte d'Ivoire</span>
+        </div>
+        <h3>Audit nutritionnel filière avicole</h3>
+        <div class="mission-result">
+          <i class="ti ti-trending-up"></i>
+          <span>+18% d'indice de conversion en 90 jours</span>
+        </div>
+      </article>
+
+      <article class="mission-card reveal">
+        <div class="mission-head">
+          <span class="flag flag-ml"><span></span><span></span><span></span></span>
+          <span class="mission-country">Mali</span>
+        </div>
+        <h3>Formulation provendes locales porcines</h3>
+        <div class="mission-result">
+          <i class="ti ti-coin"></i>
+          <span>Coût ration réduit de 23% à qualité équivalente</span>
+        </div>
+      </article>
+
+      <article class="mission-card reveal">
+        <div class="mission-head">
+          <span class="flag flag-ga horizontal"><span></span><span></span><span></span></span>
+          <span class="mission-country">Gabon</span>
+        </div>
+        <h3>Formation techniciens élevage</h3>
+        <div class="mission-result">
+          <i class="ti ti-certificate"></i>
+          <span>12 techniciens certifiés, 3 élevages autonomes</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== EQUIPE ========== -->
+<section class="equipe" id="expert">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">Notre équipe d'experts</span>
+      <h2 class="section-title">Une expertise académique et terrain au service de votre élevage</h2>
+      <p class="section-sub">Quatre experts complémentaires — académique, terrain, recherche et institutionnel — pour des solutions adaptées à chaque filière d'élevage.</p>
+    </div>
+
+    <div class="equipe-carousel reveal" id="expertCarousel">
+
+      <!-- SLIDE 1 — Prof. HAUHOUOT Diambra (Mentor scientifique) -->
+      <article class="profil-card mentor expert-slide active" data-slide="0">
+        <div class="profil-photo">
+          <img src="images/mentor-hauhouot-2.jpg" alt="Prof. HAUHOUOT Diambra" />
+          <span class="badge"><i class="ti ti-star-filled"></i> Mentor scientifique</span>
+        </div>
+        <h3 class="profil-name">Prof. HAUHOUOT Diambra</h3>
+        <p class="profil-title">Docteur en Sciences Avicoles &amp; Nutrition — Université de Géorgie, Athens (USA)</p>
+        <p class="profil-lead">« La performance d'un élevage tropical commence par une science rigoureuse, adaptée aux réalités locales. »</p>
+        <div class="timeline">
+          <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-date">1984</div><p>PhD en Sciences Avicoles et Nutrition — Université de Géorgie, Athens (USA).</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-date">1985 – 1992</div><p>Enseignant-chercheur — École Nationale d'Agronomie de Côte d'Ivoire.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-date">1992 – 2019</div><p>Professeur — Université de Guam. Productions animales &amp; agriculture durable.</p></div></div>
+        </div>
+        <div class="creds">
+          <span class="cred"><i class="ti ti-book"></i> Auteur — Tropical Layer Chicken Management Guide</span>
+          <span class="cred"><i class="ti ti-file-text"></i> Auteur de plusieurs publications dans des journaux scientifiques internationaux</span>
+        </div>
+        <div class="profil-tags">
+          <span class="profil-tag">Cycle de ponte</span>
+          <span class="profil-tag">Alimentation pondeuses</span>
+          <span class="profil-tag">Santé aviaire</span>
+          <span class="profil-tag">Agriculture durable</span>
+        </div>
+      </article>
+
+      <!-- SLIDE 2 — ODI Sylvain N'Dah (Fondateur) -->
+      <article class="profil-card praticien expert-slide" data-slide="1">
+        <div class="profil-photo">
+          <img src="images/expert-odi-pro.jpg" alt="ODI Sylvain N'Dah" />
+          <span class="badge"><i class="ti ti-star-filled"></i> Expert Senior · Fondateur</span>
+        </div>
+        <h3 class="profil-name">ODI Sylvain N'Dah</h3>
+        <p class="profil-title">Consultant Senior — Nutrition Animale &amp; Gestion de Projets Agricoles</p>
+        <div class="profil-mentor-note">« Formé sous la direction du Prof. HAUHOUOT Diambra, fondateur et directeur du cabinet. »</div>
+        <p class="profil-lead">« 20 ans d'expérience sur le terrain, de la FAO aux marchés ruraux d'Afrique de l'Ouest. »</p>
+        <div class="timeline">
+          <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-date">2005 – 2008</div><p>Consultant National FAO — Côte d'Ivoire. Appui aux filières avicoles et porcines en sortie de crise.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-date">2011 – 2024</div><p>Fondateur &amp; Gérant VITAGRAIN SARL — 120 T d'aliments / mois, plus de 1 000 éleveurs servis.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-date">2020 – présent</div><p>Consultant Indépendant — Missions en Côte d'Ivoire, Mali, Burkina Faso et Gabon.</p></div></div>
+        </div>
+        <div class="creds">
+          <span class="cred"><i class="ti ti-certificate"></i> Certificate in Poultry Sciences — University of Guam (2013)</span>
+          <span class="cred"><i class="ti ti-school"></i> DESS Gestion de Projets — Université de Cocody (2006)</span>
+        </div>
+        <div class="expert-meta">
+          <div class="meta-block"><div class="meta-label">Langues</div><div class="meta-value">Français · Anglais courant</div></div>
+          <div class="meta-block"><div class="meta-label">Outils</div><div class="meta-value">Hybrimin · NutrAnim · Feed Access · MS Project</div></div>
+        </div>
+      </article>
+
+      <!-- SLIDE 3 — Dr. Yacouba BAMBA -->
+      <article class="profil-card praticien expert-slide" data-slide="2">
+        <div class="profil-photo">
+          <img src="images/dr-bamba.jpg" alt="Dr. Yacouba BAMBA" />
+          <span class="badge"><i class="ti ti-star-filled"></i> Expert scientifique</span>
+        </div>
+        <h3 class="profil-name">Dr. Yacouba BAMBA</h3>
+        <p class="profil-title">Enseignant-Chercheur — Université Nangui-Abrogoua, Abidjan</p>
+        <p class="profil-lead">« La nutrition animale et l'aquaculture durable sont des leviers essentiels pour la souveraineté alimentaire de l'Afrique. »</p>
+        <div class="timeline">
+          <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-date">Enseignement</div><p>Enseignant-Chercheur à l'Université Nangui-Abrogoua, Abidjan — Côte d'Ivoire.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-date">Expertise</div><p>Spécialiste en <b>Nutrition Animale</b> et <b>Aquaculture</b> — formulations adaptées aux espèces locales.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-date">Recherche</div><p>Valorisation des ressources alimentaires locales pour l'aquaculture tropicale et la nutrition des ruminants.</p></div></div>
+        </div>
+        <div class="profil-tags">
+          <span class="profil-tag">Nutrition Animale</span>
+          <span class="profil-tag">Aquaculture</span>
+          <span class="profil-tag">Recherche universitaire</span>
+          <span class="profil-tag">Tilapia · Carpe · Silure</span>
+        </div>
+      </article>
+
+      <!-- SLIDE 4 — KOUDOU Diebeh Pierre -->
+      <article class="profil-card praticien expert-slide" data-slide="3">
+        <div class="profil-photo">
+          <img src="images/expert-koudou.jpg" alt="KOUDOU Diebeh Pierre" />
+          <span class="badge"><i class="ti ti-star-filled"></i> Expert institutionnel</span>
+        </div>
+        <h3 class="profil-name">KOUDOU Diebeh Pierre</h3>
+        <p class="profil-title">Ingénieur Agronome Zootechnicien — Sous-Directeur Nutrition Animale &amp; Agrostologie (DNAGEP)</p>
+        <p class="profil-lead">« Une nutrition animale maîtrisée et une bonne gestion de l'espace pastoral sont les piliers d'un élevage durable. »</p>
+        <div class="timeline">
+          <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-date">2010</div><p>Diplôme d'État d'Ingénieur Agronome &amp; DAA option Zootechnie — ESA / INP-HB de Yamoussoukro.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-date">2011 – 2012</div><p>Chef d'exploitation — ferme agropastorale Akoué Agban, Bingerville.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-date">2013 – 2022</div><p>Chef de service Nutrition Animale &amp; Agrostologie — DNAGEP, Ministère des Ressources Animales et Halieutiques.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-date">2022 – présent</div><p>Sous-Directeur de la Nutrition Animale et de l'Agrostologie — DNAGEP.</p></div></div>
+        </div>
+        <div class="profil-tags">
+          <span class="profil-tag">Nutrition animale</span>
+          <span class="profil-tag">Agrostologie</span>
+          <span class="profil-tag">Espace pastoral</span>
+          <span class="profil-tag">Productions animales</span>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="carousel-controls reveal">
+      <button class="carousel-btn" id="expertPrev" aria-label="Expert précédent"><i class="ti ti-chevron-left"></i></button>
+      <div class="carousel-dots">
+        <button class="dot active" data-target="0" aria-label="Expert 1"></button>
+        <button class="dot" data-target="1" aria-label="Expert 2"></button>
+        <button class="dot" data-target="2" aria-label="Expert 3"></button>
+        <button class="dot" data-target="3" aria-label="Expert 4"></button>
+      </div>
+      <button class="carousel-btn" id="expertNext" aria-label="Expert suivant"><i class="ti ti-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TEMOIGNAGES ========== -->
+<section class="temoignages" id="temoignages">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">Témoignages</span>
+      <h2 class="section-title">Ils nous font confiance</h2>
+    </div>
+
+    <div class="temoignages-grid">
+      <figure class="temoignage reveal">
+        <span class="t-mark">“</span>
+        <blockquote>L'audit de Sylvain a identifié des déséquilibres que nous n'avions pas détectés en 3 ans. Les résultats ont été visibles dès le premier cycle.</blockquote>
+        <figcaption>
+          <span class="t-avatar"><i class="ti ti-user"></i></span>
+          <span>
+            <span class="t-author">Directeur</span><br />
+            <span class="t-role">Ferme avicole — Abidjan</span>
+          </span>
+        </figcaption>
+      </figure>
+
+      <figure class="temoignage reveal">
+        <span class="t-mark">“</span>
+        <blockquote>Une approche très terrain, des formulations réalistes avec nos matières premières locales. Exactement ce dont nous avions besoin.</blockquote>
+        <figcaption>
+          <span class="t-avatar"><i class="ti ti-user"></i></span>
+          <span>
+            <span class="t-author">Chef de projet</span><br />
+            <span class="t-role">ONG agricole — Bamako</span>
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PRODUITS ========== -->
+<section class="produits" id="produits">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">La gamme VITAGRAIN</span>
+      <h2 class="section-title">Fabricant agréé par l'État — 5 filières, 120 T/mois</h2>
+      <p class="section-sub">Une gamme complète d'aliments formulés et fabriqués en Côte d'Ivoire, conditionnés en sacs de 50 kg.</p>
+    </div>
+
+    <div class="produits-grid">
+      <article class="produit-card reveal" data-color="green" style="--bag-color:#3D9A5E;">
+        <div class="produit-image">
+          <img src="images/bag-poisson-product.jpg" alt="Sac VITAGRAIN Poisson 50 kg" loading="lazy" />
+          <span class="produit-badge">50 KG</span>
+        </div>
+        <div class="produit-body">
+          <div class="produit-title">Poisson</div>
+          <div class="produit-subtitle">Aliment aquacole</div>
+          <h4>Espèces couvertes</h4>
+          <ul>
+            <li><i class="ti ti-check"></i> Tilapia</li>
+            <li><i class="ti ti-check"></i> Carpe</li>
+            <li><i class="ti ti-check"></i> Silure</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="produit-card reveal" data-color="orange" style="--bag-color:#E07820;">
+        <div class="produit-image">
+          <img src="images/bag-porcs-product.jpg" alt="Sac VITAGRAIN Porcs 50 kg" loading="lazy" />
+          <span class="produit-badge">50 KG</span>
+        </div>
+        <div class="produit-body">
+          <div class="produit-title">Porcs</div>
+          <div class="produit-subtitle">Croissance &amp; engraissement</div>
+          <h4>Espèces couvertes</h4>
+          <ul>
+            <li><i class="ti ti-check"></i> Porcelets</li>
+            <li><i class="ti ti-check"></i> Porcs à l'engrais</li>
+            <li><i class="ti ti-check"></i> Truies allaitantes</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="produit-card reveal" data-color="cream" style="--bag-color:#9C9580;">
+        <div class="produit-image">
+          <img src="images/bag-chair-product.jpg" alt="Sac VITAGRAIN Croissance Chair 50 kg" loading="lazy" />
+          <span class="produit-badge">50 KG</span>
+        </div>
+        <div class="produit-body">
+          <div class="produit-title">Croissance Chair</div>
+          <div class="produit-subtitle">Poulets de chair</div>
+          <h4>Phases couvertes</h4>
+          <ul>
+            <li><i class="ti ti-check"></i> Démarrage</li>
+            <li><i class="ti ti-check"></i> Croissance</li>
+            <li><i class="ti ti-check"></i> Finition</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="produit-card reveal" data-color="blue" style="--bag-color:#2A6DB5;">
+        <div class="produit-image">
+          <img src="images/bag-ponte-product.jpg" alt="Sac VITAGRAIN Croissance Ponte 50 kg" loading="lazy" />
+          <span class="produit-badge">50 KG</span>
+        </div>
+        <div class="produit-body">
+          <div class="produit-title">Croissance Ponte</div>
+          <div class="produit-subtitle">Pondeuses &amp; poulettes</div>
+          <h4>Phases couvertes</h4>
+          <ul>
+            <li><i class="ti ti-check"></i> Poulettes</li>
+            <li><i class="ti ti-check"></i> Pré-ponte</li>
+            <li><i class="ti ti-check"></i> Poules pondeuses</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <div class="produits-foot reveal">
+      <div class="produits-foot-text">
+        <strong>Pour toute commande ou demande de fiche technique :</strong> contactez l'équipe commerciale VITAGRAIN.
+      </div>
+      <div class="produits-foot-cta">
+        <a href="tel:+2250707386429" class="btn btn-primary">+(225) 07 07 38 64 29</a>
+        <a href="tel:+33744833906" class="btn btn-primary"><i class="ti ti-phone"></i> +(33) 7 44 83 39 06</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== STATS / QUOTE ========== -->
+<section class="stats" id="stats">
+  <div class="container">
+    <div class="stats-grid reveal">
+      <div class="stat">
+        <div class="stat-value" data-count="1000" data-suffix="+">0</div>
+        <div class="stat-label">Éleveurs accompagnés</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" data-count="120" data-suffix=" T">0</div>
+        <div class="stat-label">Aliments / mois</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" data-count="5">0</div>
+        <div class="stat-label">Filières couvertes</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" data-count="20" data-suffix=" ans">0</div>
+        <div class="stat-label">D'expérience</div>
+      </div>
+    </div>
+
+    <blockquote class="quote reveal">
+      <span class="quote-mark">“</span>
+      <p class="quote-text">Adapter la science nutritionnelle aux matières premières locales, c'est rendre l'élevage tropical à la fois performant, rentable et souverain.</p>
+      <div class="quote-author">— ODI Sylvain N'Dah, fondateur Vitagrain</div>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-form-side reveal">
+        <div class="contact-head">
+          <span class="section-kicker">Contact</span>
+          <h2>Démarrons votre projet</h2>
+          <p>Répondez en quelques lignes : nous revenons vers vous sous 48 h ouvrées.</p>
+        </div>
+
+        <form class="form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="f-name">Nom complet</label>
+              <input type="text" id="f-name" name="name" required placeholder="" />
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" name="email" required placeholder="" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="f-phone">Téléphone / WhatsApp</label>
+              <input type="tel" id="f-phone" name="phone" placeholder="" />
+            </div>
+            <div class="field">
+              <label for="f-mission">Type de mission</label>
+              <select id="f-mission" name="mission">
+                <option value="">Choisir un type de mission</option>
+                <option>Audit nutritionnel</option>
+                <option>Formulation sur mesure</option>
+                <option>Formation &amp; renforcement</option>
+                <option>Suivi terrain</option>
+                <option>Mission institutionnelle / ONG</option>
+                <option>Autre</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-msg">Votre message</label>
+            <textarea id="f-msg" name="message" placeholder="Décrivez votre situation actuelle et ce que vous souhaitez améliorer (localisation, espèces, effectifs, problématique principale)"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="ti ti-send"></i> Soumettre ma demande de consultation
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="ti ti-circle-check-filled"></i>
+            <span>Merci ! Votre demande a bien été enregistrée. Nous revenons vers vous très rapidement.</span>
+          </div>
+        </form>
+      </div>
+
+      <aside class="contact-info reveal">
+        <h3 class="info-title">Coordonnées</h3>
+        <ul class="info-list">
+          <li class="info-item">
+            <span class="info-icon"><i class="ti ti-map-pin"></i></span>
+            <div class="info-text">
+              <div class="info-label">Adresse</div>
+              <div class="info-value">Cocody Angré – Extension<br/>Abidjan, Côte d'Ivoire</div>
+            </div>
+          </li>
+          <li class="info-item">
+            <span class="info-icon"><i class="ti ti-brand-whatsapp"></i></span>
+            <div class="info-text">
+              <div class="info-label">WhatsApp</div>
+              <div class="info-value"><a href="https://wa.me/2250707386429">+(225) 07 07 38 64 29</a><br/><a href="https://wa.me/33744833906">+(33) 7 44 83 39 06</a></div>
+            </div>
+          </li>
+          <li class="info-item">
+            <span class="info-icon"><i class="ti ti-mail"></i></span>
+            <div class="info-text">
+              <div class="info-label">Email</div>
+              <div class="info-value"><a href="mailto:info@vitagrainnutrition.com">info@vitagrainnutrition.com</a><br/><a href="mailto:sylvodi@vitagrainnutrition.com">sylvodi@vitagrainnutrition.com</a></div>
+            </div>
+          </li>
+          <li class="info-item">
+            <span class="info-icon"><i class="ti ti-world"></i></span>
+            <div class="info-text">
+              <div class="info-label">Site web</div>
+              <div class="info-value"><a href="https://vitagrainnutrition.com" target="_blank" rel="noopener">vitagrainnutrition.com</a></div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="social-row">
+          <a href="https://wa.me/2250707386429" class="social wa" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
+          <a href="#" class="social li" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+          <a href="mailto:info@vitagrainnutrition.com" class="social" aria-label="Email"><i class="ti ti-mail"></i></a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-logo">VITAGRA<span class="dot">I</span>N</div>
+    <p class="footer-tag">Nutrition animale tropicale · Côte d'Ivoire · Afrique subsaharienne</p>
+    <div class="footer-contact">
+      <a href="https://wa.me/2250707386429"><i class="ti ti-brand-whatsapp"></i> +(225) 07 07 38 64 29</a>
+      <a href="https://wa.me/33744833906"><i class="ti ti-brand-whatsapp"></i> +(33) 7 44 83 39 06</a>
+      <a href="mailto:info@vitagrainnutrition.com"><i class="ti ti-mail"></i> info@vitagrainnutrition.com</a>
+      <a href="https://vitagrainnutrition.com" target="_blank" rel="noopener"><i class="ti ti-world"></i> vitagrainnutrition.com</a>
+    </div>
+    <div class="footer-bottom">
+      © 2026 VITAGRAIN SARL — Tous droits réservés. Fabricant agréé par l'État. Site conçu pour ODI Sylvain N'Dah.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ===== Nav scroll state =====
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    if (window.scrollY > 40) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // ===== Burger menu =====
+  const burger = document.getElementById('navBurger');
+  const navMobile = document.getElementById('navMobile');
+  burger.addEventListener('click', () => navMobile.classList.toggle('open'));
+  navMobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navMobile.classList.remove('open')));
+
+  // ===== Active nav link on scroll =====
+  const sections = ['services', 'methode', 'missions', 'expert', 'produits', 'contact'];
+  const navLinks = document.querySelectorAll('.nav-link');
+  const onActive = () => {
+    const y = window.scrollY + 120;
+    let active = null;
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && el.offsetTop <= y) active = id;
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + active);
+    });
+  };
+  window.addEventListener('scroll', onActive, { passive: true });
+
+  // ===== Reveal on scroll =====
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('in'), i * 60);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // ===== Animated counters =====
+  const counters = document.querySelectorAll('[data-count]');
+  const animateCount = (el) => {
+    const target = parseInt(el.getAttribute('data-count'), 10);
+    const suffix = el.getAttribute('data-suffix') || '';
+    const duration = 1500;
+    const start = performance.now();
+    const step = (now) => {
+      const p = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      const value = Math.round(target * eased);
+      el.textContent = value.toLocaleString('fr-FR') + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  const cio = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        animateCount(e.target);
+        cio.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  counters.forEach(c => cio.observe(c));
+
+  // Trigger hero counters immediately on load
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.hero [data-count]').forEach(c => { animateCount(c); cio.unobserve(c); });
+  });
+
+  // ===== Contact form =====
+  const form = document.getElementById('contactForm');
+  const formSuccess = document.getElementById('formSuccess');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    formSuccess.classList.add('active');
+    form.reset();
+    setTimeout(() => formSuccess.classList.remove('active'), 6000);
+  });
+</script>
+
+<template id="__bundler_thumbnail" data-bg-color="#0A3A17">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0A3A17"/>
+    <g transform="translate(600 400)">
+      <circle r="190" fill="#1B6B2F"/>
+      <circle r="120" fill="#2D9A45"/>
+      <text x="0" y="22" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="88" fill="#F5C400">VG</text>
+    </g>
+    <text x="600" y="660" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="#F2EFE5" letter-spacing="6">VITAGRAIN</text>
+  </svg>
+</template>
+
+<script>
+  // ===== CARROUSEL EXPERTS =====
+  (function(){
+    const slides = document.querySelectorAll('.expert-slide');
+    const dots   = document.querySelectorAll('.carousel-dots .dot');
+    if(!slides.length) return;
+    let current = 0;
+    function goTo(n){
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (n + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+    document.getElementById('expertPrev').addEventListener('click', () => goTo(current - 1));
+    document.getElementById('expertNext').addEventListener('click', () => goTo(current + 1));
+    dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.target)));
+    let startX = 0;
+    const carousel = document.getElementById('expertCarousel');
+    carousel.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, {passive:true});
+    carousel.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 40) goTo(dx < 0 ? current + 1 : current - 1);
+    }, {passive:true});
+  })();
+</script>
+</body>
+</html>
+
+<style id="__om-edit-overrides">
+#hero :is(h1,h2,h3,h4,h5,h6,p,li,dt,dd,blockquote,figcaption,label,span,a,em,strong,small,td,th,caption) >b { font-family: Ubuntu !important }
+#hero :is(h1,h2,h3,h4,h5,h6,p,li,dt,dd,blockquote,figcaption,label,span,a,em,strong,small,td,th,caption) >b { text-align: center !important }
+</style>
