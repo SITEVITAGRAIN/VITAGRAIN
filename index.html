@@ -122,6 +122,7 @@
   .nav-cta-nums { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.18; gap: 1px; }
   .nav-cta-nums a { color: #fff; font-size: 0.76rem; font-weight: 600; white-space: nowrap; }
   .nav-cta-nums a:hover { text-decoration: underline; }
+  .nav-cta-wa-icon { color: #fff; }
 
   .nav-mobile { display: none; }
   .nav-burger { display: none; background: transparent; border: none; color: var(--vg-white); cursor: pointer; padding: 6px; }
@@ -1094,6 +1095,25 @@
     width: 100%; max-width: 800px;
   }
 
+  /* ========== BOUTON WHATSAPP FLOTTANT ========== */
+  .wa-float {
+    position: fixed; bottom: 24px; right: 24px; z-index: 1200;
+    width: 58px; height: 58px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: #25D366; color: #fff; font-size: 30px;
+    box-shadow: 0 6px 20px rgba(37,211,102,0.45), 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: wa-pulse 2.4s ease-out infinite;
+  }
+  .wa-float:hover { transform: scale(1.08); box-shadow: 0 8px 26px rgba(37,211,102,0.55); }
+  @keyframes wa-pulse {
+    0% { box-shadow: 0 6px 20px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0.5); }
+    70% { box-shadow: 0 6px 20px rgba(37,211,102,0.45), 0 0 0 16px rgba(37,211,102,0); }
+    100% { box-shadow: 0 6px 20px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0); }
+  }
+  @media (prefers-reduced-motion: reduce) { .wa-float { animation: none; } }
+  @media (max-width: 600px) { .wa-float { width: 52px; height: 52px; font-size: 27px; bottom: 18px; right: 18px; } }
+
   /* ========== REVEAL ANIMATION ========== */
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.in { opacity: 1; transform: translateY(0); }
@@ -1176,10 +1196,10 @@
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
     <div class="nav-cta nav-cta--dual">
-      <i class="ti ti-phone" aria-hidden="true"></i>
+      <i class="ti ti-brand-whatsapp nav-cta-wa-icon" aria-hidden="true"></i>
       <span class="nav-cta-nums">
-        <a href="tel:+2250707386429">+(225) 07 07 38 64 29</a>
-        <a href="tel:+33744833906">+(33) 7 44 83 39 06</a>
+        <a href="https://wa.me/2250707386429" target="_blank" rel="noopener">+(225) 07 07 38 64 29</a>
+        <a href="https://wa.me/33744833906" target="_blank" rel="noopener">+(33) 7 44 83 39 06</a>
       </span>
     </div>
     <button class="nav-burger" id="navBurger" aria-label="Menu">
@@ -1197,10 +1217,10 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-cta nav-cta--dual">
-      <i class="ti ti-phone"></i>
+      <i class="ti ti-brand-whatsapp nav-cta-wa-icon"></i>
       <span class="nav-cta-nums">
-        <a href="tel:+2250707386429">07 07 38 64 29</a>
-        <a href="tel:+33744833906">+(33) 7 44 83 39 06</a>
+        <a href="https://wa.me/2250707386429" target="_blank" rel="noopener">07 07 38 64 29</a>
+        <a href="https://wa.me/33744833906" target="_blank" rel="noopener">+(33) 7 44 83 39 06</a>
       </span>
     </div>
   </div>
@@ -1215,12 +1235,12 @@
   <div class="hero-inner">
     <div class="hero-content">
       <h1 class="hero-title">Conseil en Nutrition Animale Tropicale -Fabricant agréé</h1>
-      <p class="hero-sub">Formulations nutritionnelles sur mesure à partir de matières premières locales. Nos spécialistes se déplacent dans toutes les régions tropicales et équatoriales pour accompagner les éleveurs et développer des solutions adaptées à chaque besoin.</p>
+      <p class="hero-sub">Formulations nutritionnelles sur mesure à partir de matières premières locales. Nos spécialistes se déplacent dans toutes les milieux tropicaux et équatoriaux du monde pour accompagner les éleveurs et développer des solutions adaptées à chaque besoin.</p>
       <div class="hero-cta-row">
         <a href="#contact" class="btn btn-primary">Demander un diagnostic gratuit <i class="ti ti-arrow-right"></i></a>
         <a href="#contact" class="btn btn-ghost"><i class="ti ti-calendar"></i> Prendre rendez-vous</a>
       </div>
-      <p class="hero-reassure">Volailles · Lapins · Porcs · Ovins &amp; Bovins · Poissons </p>
+      <p class="hero-reassure">Volailles · Lapins · Porcs · Ovins &amp; Bovins · Poissons · Escargots · Aulacodes ...  </p>
     </div>
 
     <div class="hero-image">
@@ -1231,7 +1251,7 @@
         </div>
         <div class="caption">
           <div class="caption-title"><i class="ti ti-map-pin"></i> Ferme intégrée</div>
-          <div class="caption-sub">Aviculture · Pisciculture · Porciculture</div>
+          <div class="caption-sub">Aviculture · Pisciculture · Porciculture etc...</div>
         </div>
       </div>
 
@@ -1271,13 +1291,13 @@
     </div>
     <div class="apropos-layout reveal">
       <div class="apropos-text">
-        <p>Vitagrain est une entreprise spécialisée dans la fabrication d'aliments composés pour animaux d'élevage, adaptés aux conditions tropicales. En s'appuyant sur l'expertise de nutritionnistes africains et une collaboration étroite avec les acteurs locaux, nous mettons au point des formulations nutritionnelles de haute qualité, principalement à partir de matières premières locales.</p>
+        <p>Vitagrain est une entreprise spécialisée dans la fabrication d'aliments composés pour animaux d'élevage, adaptés aux conditions tropicales. En s'appuyant sur l'expertise de nutritionnistes et une collaboration étroite avec les acteurs locaux, nous mettons au point des formulations nutritionnelles de haute qualité, principalement à partir des matières premières disponibles dans la région d'intervention.</p>
         <p>Notre approche repose sur une valorisation intelligente des ressources disponibles : sous-produits agricoles et résidus d'usines agro-alimentaires pour créer des aliments riches et équilibrés, tout en contribuant à la sécurité alimentaire et à une économie circulaire.</p>
         <h3 class="apropos-sub">Ce qui nous distingue</h3>
         <ul class="apropos-list">
           <li><strong>Production locale et durable :</strong> matières premières issues directement des zones où nous opérons, renforçant les économies locales.</li>
-          <li><strong>Diversité des produits :</strong> gamme complète d'aliments composés — volailles, lapins, porcs, ovins &amp; bovins, poissons.</li>
-          <li><strong>Savoir-faire terrain :</strong> nos spécialistes se déplacent dans toutes les régions tropicales et équatoriales pour accompagner les éleveurs et développer des solutions sur mesure.</li>
+          <li>Diversité des produits : gamme complète d'aliments composés pour volailles, lapins, porcs, ovins, bovins, poissons, escargots, aulacodes, etc...</li>
+          <li>Savoir-faire terrain : nos spécialistes se déplacent dans toutes les régions tropicales et équatoriales du monde pour accompagner les éleveurs et développer des solutions sur mesure.</li>
         </ul>
         <p class="apropos-tagline"><em>Vitagrain, c'est l'assurance de grains en or pour vos animaux — une solution innovante, durable et bénéfique pour votre rentabilité.</em></p>
       </div>
@@ -1290,11 +1310,13 @@
           <span><i class="ti ti-meat"></i> Porcs</span>
           <span><i class="ti ti-cow"></i> Ovins &amp; Bovins</span>
           <span><i class="ti ti-fish"></i> Poissons</span>
+          <span><i class="ti ti-dots"></i> Autres</span>
         </div>
         <div class="apropos-card-contact">
           <div><i class="ti ti-mail"></i> info@vitagrainnutrition.com</div>
           <div><i class="ti ti-world"></i> vitagrainnutrition.com</div>
-          <div><i class="ti ti-brand-whatsapp"></i> +(225) 07 07 38 64 29</div>
+          <div>+(225) 07 07 38 64 29
++(33) 7 44 83 39 06</div>
         </div>
       </aside>
     </div>
@@ -1313,21 +1335,27 @@
       <div class="approche-col reveal">
         <div class="approche-icon"><i class="ti ti-recycle"></i></div>
         <h3>Production locale &amp; durable</h3>
-        <p>Matières premières sourcées directement dans les zones d'intervention, pour des formulations compétitives.</p>
+        <p>Exemple de Matières premières sourcées directement dans les zones d'intervention, pour des formulations compétitives.</p>
         <div class="approche-tags">
           <span class="approche-chip"><i class="ti ti-plant-2"></i> Maïs</span>
-          <span class="approche-chip"><i class="ti ti-seeding"></i> Manioc &amp; céréales</span>
-          <span class="approche-chip"><i class="ti ti-fish"></i> Tourteaux &amp; protéines</span>
-          <span class="approche-chip"><i class="ti ti-leaf"></i> Sous-produits agricoles</span>
+          <span class="approche-chip"><i class="ti ti-seeding"></i> Manioc</span>
+          <span class="approche-chip">Autres Céréales</span>
+          <span class="approche-chip"><i class="ti ti-plant"></i> Sorgho</span>
+          <span class="approche-chip"><i class="ti ti-seeding"></i> Tourteaux</span>
+          <span class="approche-chip"><i class="ti ti-fish"></i> Farine de poissons</span>
+          <span class="approche-chip">Piments</span>
+          <span class="approche-chip"><i class="ti ti-bug"></i> BSF</span>
+          <span class="approche-chip"><i class="ti ti-recycle"></i> Sous-produits agricoles</span>
+          <span class="approche-chip"><i class="ti ti-dots"></i> Autres</span>
         </div>
       </div>
       <div class="approche-col reveal">
         <div class="approche-icon"><i class="ti ti-map-pin"></i></div>
         <h3>Expertise terrain mobilisable</h3>
-        <p>Nos consultants se déplacent dans toute l'Afrique tropicale — Côte d'Ivoire, Mali, Burkina Faso, Gabon et au-delà.</p>
+        <p>Nos consultants se déplacent dans toutes les régions tropicales et équatoriales du monde.</p>
         <div class="approche-tags">
           <span class="approche-chip"><i class="ti ti-plane"></i> Déplacements</span>
-          <span class="approche-chip"><i class="ti ti-map-2"></i> 4 pays couverts</span>
+          <span class="approche-chip">Régions Tropicales</span>
           <span class="approche-chip"><i class="ti ti-users"></i> Équipe terrain</span>
           <span class="approche-chip"><i class="ti ti-message-2"></i> Conseil sur site</span>
         </div>
@@ -1342,7 +1370,7 @@
     <div class="section-head reveal">
       <span class="section-kicker">Nos expertises</span>
       <h2 class="section-title">Un accompagnement, du diagnostic à la performance</h2>
-      <p class="section-sub">Une offre intégrée pensée pour les réalités économiques et zootechniques des filières tropicales - terrain, données, et formation.</p>
+      <p class="section-sub">Une offre intégrée pensée pour les réalités économiques et zootechniques des filières tropicales (terrain, données, et formation...)</p>
     </div>
 
     <div class="services-grid">
@@ -1356,7 +1384,7 @@
       <article class="service-card reveal" data-accent="gold">
         <div class="service-icon"><i class="ti ti-flask"></i></div>
         <h3>Formulation sur Mesure</h3>
-        <p>Conception de provendes adaptées aux matières premières locales disponibles. Outils professionnels : Hybrimin, NutrAnim, Feed Access.</p>
+        <p>Conception de provendes adaptées aux matières premières locales disponibles. Matrices de formulation adpatées.</p>
         <a href="#contact" class="more">En savoir plus <i class="ti ti-arrow-right"></i></a>
       </article>
 
@@ -1390,25 +1418,29 @@
         <div class="methode-num"><i class="ti ti-phone-call"></i></div>
         <span class="step-index">Étape 01</span>
         <h3>Prise de contact</h3>
-        <p>Échange de 30 min pour cadrer votre besoin et vos objectifs.</p>
+        <p>Échanges pour cadrer vos besoins et vos objectifs.
+Inventaire des matières premières disponibles localement</p>
       </div>
       <div class="methode-step reveal">
         <div class="methode-num"><i class="ti ti-stethoscope"></i></div>
         <span class="step-index">Étape 02</span>
         <h3>Diagnostic terrain</h3>
-        <p>Visite et analyse complète de vos rations, performances et pratiques.</p>
+        <p>Visite des sites, recensement du matériel, analyse des rations et des pratiques.
+
+
+</p>
       </div>
       <div class="methode-step reveal">
         <div class="methode-num"><i class="ti ti-target-arrow"></i></div>
         <span class="step-index">Étape 03</span>
-        <h3>Plan d'action chiffré</h3>
-        <p>Recommandations priorisées avec objectifs mesurables.</p>
+        <h3>Formulations sur mesure</h3>
+        <p>Rations optimisées alliant efficacité, coût et disponibilité.</p>
       </div>
       <div class="methode-step reveal">
         <div class="methode-num"><i class="ti ti-refresh"></i></div>
         <span class="step-index">Étape 04</span>
-        <h3>Suivi &amp; ajustements</h3>
-        <p>Accompagnement régulier jusqu'aux résultats.</p>
+        <h3>Renforcement des capacités</h3>
+        <p>Accompagnement de boute en bout et régulier jusqu'aux résultats. Formation à la fabrication de la provende et à la maîtrise des matières premières.</p>
       </div>
     </div>
   </div>
@@ -1626,8 +1658,8 @@
   <div class="container">
     <div class="section-head reveal">
       <span class="section-kicker">La gamme VITAGRAIN</span>
-      <h2 class="section-title">Fabricant agréé par l'État — 5 filières, 120 T/mois</h2>
-      <p class="section-sub">Une gamme complète d'aliments formulés et fabriqués en Côte d'Ivoire, conditionnés en sacs de 50 kg.</p>
+      <h2 class="section-title">Fabricant agréé </h2>
+      <p class="section-sub">Exemple de gamme complète d'aliments formulés et fabriqués: Poissons, Porcs, Volailles, Lapins, Escargots, Aulacodes etc...</p>
     </div>
 
     <div class="produits-grid">
@@ -1637,7 +1669,7 @@
           <span class="produit-badge">50 KG</span>
         </div>
         <div class="produit-body">
-          <div class="produit-title">Poisson</div>
+          <div class="produit-title">Poissons</div>
           <div class="produit-subtitle">Aliment aquacole</div>
           <h4>Espèces couvertes</h4>
           <ul>
@@ -1671,8 +1703,8 @@
           <span class="produit-badge">50 KG</span>
         </div>
         <div class="produit-body">
-          <div class="produit-title">Croissance Chair</div>
-          <div class="produit-subtitle">Poulets de chair</div>
+          <div class="produit-title">Volailles</div>
+          <div class="produit-subtitle">Poulets de chair/Pondeuses</div>
           <h4>Phases couvertes</h4>
           <ul>
             <li><i class="ti ti-check"></i> Démarrage</li>
@@ -1684,17 +1716,16 @@
 
       <article class="produit-card reveal" data-color="blue" style="--bag-color:#2A6DB5;">
         <div class="produit-image">
-          <img src="images/bag-ponte-product.jpg" alt="Sac VITAGRAIN Croissance Ponte 50 kg" loading="lazy" />
-          <span class="produit-badge">50 KG</span>
+          <img src="images/bag-lapins-nologo.png" alt="Affiche VITAGRAIN Alimentation pour lapins" loading="lazy" />
         </div>
         <div class="produit-body">
-          <div class="produit-title">Croissance Ponte</div>
-          <div class="produit-subtitle">Pondeuses &amp; poulettes</div>
+          <div class="produit-title">Lapins</div>
+          <div class="produit-subtitle">Mixte, Repro, Croissance</div>
           <h4>Phases couvertes</h4>
           <ul>
-            <li><i class="ti ti-check"></i> Poulettes</li>
-            <li><i class="ti ti-check"></i> Pré-ponte</li>
-            <li><i class="ti ti-check"></i> Poules pondeuses</li>
+            <li>Lapereaux</li>
+            <li>Croissance</li>
+            <li>Reproduction</li>
           </ul>
         </div>
       </article>
@@ -1855,6 +1886,11 @@
     </div>
   </div>
 </footer>
+
+<!-- ========== BOUTON WHATSAPP FLOTTANT ========== -->
+<a href="https://wa.me/2250707386429" class="wa-float" target="_blank" rel="noopener" aria-label="Nous contacter sur WhatsApp">
+  <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>
+</a>
 
 <script>
   // ===== Nav scroll state =====
