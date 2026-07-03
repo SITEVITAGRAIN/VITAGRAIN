@@ -7,6 +7,26 @@
 <meta name="description" content="VITAGRAIN — Cabinet conseil et fabricant agréé d'aliments composés pour animaux d'élevage en Côte d'Ivoire. Audit, formulation, accompagnement terrain : volailles, porcs, lapins, ruminants, aquaculture." />
 <meta name="keywords" content="nutrition animale Côte d'Ivoire, consultant élevage Abidjan, formulation provende Afrique, audit nutritionnel élevage tropical, fabricant aliment agréé CI, tilapia porc volaille consultant" />
 
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/favicon-v.png" />
+<link rel="apple-touch-icon" href="images/favicon-v.png" />
+
+<!-- Open Graph (aperçu WhatsApp / LinkedIn / Facebook) -->
+<link rel="canonical" href="https://sitevitagrain.github.io/VITAGRAIN/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="VITAGRAIN" />
+<meta property="og:title" content="VITAGRAIN — Cabinet conseil et fabricant agréé d'aliments d'élevage" />
+<meta property="og:description" content="Audit, formulation et accompagnement terrain en nutrition animale tropicale : volailles, porcs, lapins, ruminants, aquaculture. Côte d'Ivoire." />
+<meta property="og:url" content="https://sitevitagrain.github.io/VITAGRAIN/" />
+<meta property="og:image" content="https://sitevitagrain.github.io/VITAGRAIN/images/og-cover.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="fr_FR" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="VITAGRAIN — Cabinet conseil et fabricant agréé d'aliments d'élevage" />
+<meta name="twitter:description" content="Audit, formulation et accompagnement terrain en nutrition animale tropicale. Côte d'Ivoire." />
+<meta name="twitter:image" content="https://sitevitagrain.github.io/VITAGRAIN/images/og-cover.png" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,500&family=DM+Sans:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet" />
@@ -1016,7 +1036,19 @@
     box-shadow: 0 0 0 3px rgba(45, 154, 69, 0.15);
   }
   .field textarea { min-height: 130px; resize: vertical; }
-  .form .btn-primary { justify-content: center; width: 100%; padding: 16px; margin-top: 4px; }
+  .form .btn-primary { justify-content: center; padding: 16px; margin-top: 4px; }
+  .form-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 4px; }
+  .btn-whatsapp {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 16px; border-radius: 10px; border: none; cursor: pointer;
+    background: #25D366; color: #fff; font-family: inherit; font-size: 0.95rem; font-weight: 600;
+    transition: filter 0.15s ease, transform 0.15s ease;
+  }
+  .btn-whatsapp:hover { filter: brightness(1.06); transform: translateY(-1px); }
+  .btn-whatsapp i { font-size: 20px; }
+  .form-note { font-size: 0.82rem; color: var(--vg-gray, #6b7280); margin: 10px 0 0; text-align: center; }
+  .form-error { background: rgba(220, 60, 60, 0.1); color: #b03030; }
+  @media (max-width: 600px) { .form-actions { grid-template-columns: 1fr; } }
   .form-success {
     display: none; padding: 16px 20px; border-radius: 10px;
     background: rgba(45, 154, 69, 0.1); color: var(--vg-green-dark);
@@ -1817,12 +1849,22 @@ Inventaire des matières premières disponibles localement</p>
             <label for="f-msg">Votre message</label>
             <textarea id="f-msg" name="message" placeholder="Décrivez votre situation actuelle et ce que vous souhaitez améliorer (localisation, espèces, effectifs, problématique principale)"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">
-            <i class="ti ti-send"></i> Soumettre ma demande de consultation
-          </button>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
+              <i class="ti ti-send"></i> Soumettre ma demande de consultation
+            </button>
+            <button type="button" class="btn btn-whatsapp" id="waSubmit">
+              <i class="ti ti-brand-whatsapp"></i> Envoyer via WhatsApp
+            </button>
+          </div>
+          <p class="form-note">Réponse sous 24 h ouvrées.</p>
           <div class="form-success" id="formSuccess">
             <i class="ti ti-circle-check-filled"></i>
-            <span>Merci ! Votre demande a bien été enregistrée. Nous revenons vers vous très rapidement.</span>
+            <span>Merci ! Votre demande a bien été envoyée. Nous revenons vers vous très rapidement.</span>
+          </div>
+          <div class="form-success form-error" id="formError">
+            <i class="ti ti-alert-circle-filled"></i>
+            <span>L'envoi a échoué. Réessayez ou contactez-nous directement via WhatsApp.</span>
           </div>
         </form>
       </div>
@@ -1888,7 +1930,7 @@ Inventaire des matières premières disponibles localement</p>
 </footer>
 
 <!-- ========== BOUTON WHATSAPP FLOTTANT ========== -->
-<a href="https://wa.me/2250707386429" class="wa-float" target="_blank" rel="noopener" aria-label="Nous contacter sur WhatsApp">
+<a href="https://wa.me/2250707386429?text=Bonjour%20VITAGRAIN%2C%20je%20souhaite%20un%20conseil%20pour%20mon%20%C3%A9levage." class="wa-float" target="_blank" rel="noopener" aria-label="Nous contacter sur WhatsApp">
   <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>
 </a>
 
@@ -1967,13 +2009,66 @@ Inventaire des matières premières disponibles localement</p>
   });
 
   // ===== Contact form =====
+  // Envoi email via Web3Forms (https://web3forms.com — gratuit).
+  // ⚠️ Créez votre clé avec info@vitagrainnutrition.com et collez-la ici :
+  const WEB3FORMS_KEY = '09fa6665-ab50-49fe-a0c3-3a8480db7bb3';
+
   const form = document.getElementById('contactForm');
   const formSuccess = document.getElementById('formSuccess');
-  form.addEventListener('submit', (e) => {
+  const formError = document.getElementById('formError');
+
+  const getFormData = () => ({
+    name: document.getElementById('f-name').value.trim(),
+    email: document.getElementById('f-email').value.trim(),
+    phone: document.getElementById('f-phone').value.trim(),
+    mission: document.getElementById('f-mission').value,
+    message: document.getElementById('f-msg').value.trim()
+  });
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    formSuccess.classList.add('active');
-    form.reset();
-    setTimeout(() => formSuccess.classList.remove('active'), 6000);
+    formSuccess.classList.remove('active');
+    formError.classList.remove('active');
+    const d = getFormData();
+    if (!d.name || !d.email) { form.reportValidity ? form.reportValidity() : null; }
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: 'Nouvelle demande de consultation — site VITAGRAIN',
+          from_name: 'Site VITAGRAIN',
+          name: d.name, email: d.email,
+          telephone: d.phone, type_de_mission: d.mission, message: d.message
+        })
+      });
+      const json = await res.json();
+      if (json.success) {
+        formSuccess.classList.add('active');
+        form.reset();
+        setTimeout(() => formSuccess.classList.remove('active'), 8000);
+      } else { throw new Error(json.message); }
+    } catch (err) {
+      formError.classList.add('active');
+      setTimeout(() => formError.classList.remove('active'), 8000);
+    } finally {
+      btn.disabled = false;
+    }
+  });
+
+  // ===== Envoi via WhatsApp =====
+  document.getElementById('waSubmit').addEventListener('click', () => {
+    const d = getFormData();
+    const lines = ['Bonjour VITAGRAIN, je souhaite une consultation.'];
+    if (d.name) lines.push('Nom : ' + d.name);
+    if (d.mission) lines.push('Type de mission : ' + d.mission);
+    if (d.phone) lines.push('Téléphone : ' + d.phone);
+    if (d.email) lines.push('Email : ' + d.email);
+    if (d.message) lines.push('Message : ' + d.message);
+    window.open('https://wa.me/2250707386429?text=' + encodeURIComponent(lines.join('\n')), '_blank');
   });
 </script>
 
