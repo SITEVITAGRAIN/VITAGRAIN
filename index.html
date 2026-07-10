@@ -1205,7 +1205,12 @@
     }
     .nav-mobile .nav-cta { display: inline-flex; margin-top: 14px; }
 
-    .hero { padding: 100px 24px 280px; }
+    /* Logo plus compact pour ne pas chevaucher le titre */
+    .logo-lockup { width: 150px; }
+    .logo { padding: 6px 12px 5px; }
+    .logo-tag { font-size: 9px; }
+
+    .hero { padding: 140px 24px 280px; }
     .kpi-strip { grid-template-columns: 1fr; padding: 18px 20px; gap: 14px; bottom: 24px; }
     .kpi + .kpi::before { content: none; }
     .kpi { display: flex; align-items: baseline; justify-content: center; gap: 10px; }
@@ -1230,7 +1235,7 @@
     .container { padding-left: 18px; padding-right: 18px; }
 
     /* Hero : titre plus compact, CTA pleine largeur */
-    .hero { padding: 90px 18px 260px; }
+    .hero { padding: 130px 18px 260px; }
     .hero h1.hero-title { font-size: 1.65rem; line-height: 1.25; }
     .hero-line--alt { margin-top: 12px; padding-top: 12px; }
     .hero-sub { font-size: 0.95rem; }
