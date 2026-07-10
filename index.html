@@ -67,6 +67,8 @@
 
   .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
 
+  img { max-width: 100%; }
+
   /* ========== NAV ========== */
   .nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -197,8 +199,14 @@
     color: white; margin-bottom: 22px;
     text-wrap: balance;
   }
-  .hero h1 .accent { color: var(--vg-gold); font-style: italic; }
+  .hero h1 .accent { color: var(--vg-gold); }
   .hero h1.hero-title { text-align: center; font-size: clamp(2.2rem, 4.8vw, 3.6rem); }
+  .hero-line { display: block; }
+  .hero-line--alt {
+    font-weight: 500; color: #F6F6F5;
+    margin-top: 18px; padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,0.25);
+  }
 
   .hero-sub {
     font-size: clamp(1rem, 1.4vw, 1.15rem);
@@ -361,7 +369,7 @@
   /* ========== SERVICES ========== */
   .services { background: var(--vg-white); }
   .services-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;
   }
   .service-card {
     background: white; border-radius: 18px; padding: 30px 26px 28px;
@@ -1152,6 +1160,12 @@
   .reveal.in { opacity: 1; transform: translateY(0); }
 
   /* ========== RESPONSIVE ========== */
+  /* Palier tablette large / petit laptop */
+  @media (max-width: 1280px) {
+    .services-grid { grid-template-columns: repeat(3, 1fr); }
+    .produits-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
   @media (max-width: 960px) {
     .hero-inner { grid-template-columns: 1fr; gap: 40px; text-align: center; }
     .hero-content { max-width: 720px; margin: 0 auto; }
@@ -1205,7 +1219,53 @@
     .quote { padding: 24px 12px; }
     .expert-meta { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
+    /* Évite le zoom automatique iOS sur les champs */
+    .field input, .field select, .field textarea { font-size: 16px; }
     .produits-foot { text-align: center; flex-direction: column; }
+  }
+
+  /* ========== POLISH MOBILE ========== */
+  @media (max-width: 480px) {
+    section { padding: 60px 0; }
+    .container { padding-left: 18px; padding-right: 18px; }
+
+    /* Hero : titre plus compact, CTA pleine largeur */
+    .hero { padding: 90px 18px 260px; }
+    .hero h1.hero-title { font-size: 1.65rem; line-height: 1.25; }
+    .hero-line--alt { margin-top: 12px; padding-top: 12px; }
+    .hero-sub { font-size: 0.95rem; }
+    .hero-cta-row { flex-direction: column; align-items: stretch; gap: 12px; }
+    .hero-cta-row .btn { justify-content: center; width: 100%; }
+
+    /* Titres de sections */
+    .section-title { font-size: 1.5rem; }
+    .section-head { margin-bottom: 36px; }
+
+    /* Cartes plus aérées sur petit écran */
+    .service-card, .mission-card, .approche-card { padding: 24px 20px; }
+    .profil-card { padding: 24px 18px; }
+    .profil-tags { gap: 6px; }
+    .profil-tag { font-size: 0.72rem; padding: 5px 10px; }
+    .timeline-content p { font-size: 0.85rem; }
+
+    /* Chips matières premières */
+    .approche-chip { font-size: 0.78rem; padding: 6px 10px; }
+
+    /* Témoignages / contact */
+    .temoignage { padding: 26px 20px; }
+    .form { padding: 24px 18px; }
+
+    /* Nav mobile : boutons de contact bien tapables */
+    .nav-mobile .nav-cta-nums a { padding: 8px 0; display: inline-flex; }
+  }
+
+  /* Très petits écrans */
+  @media (max-width: 360px) {
+    .container { padding-left: 14px; padding-right: 14px; }
+    .hero h1.hero-title { font-size: 1.45rem; }
+    .zones-grid { grid-template-columns: 1fr; }
+    .kpi-value { font-size: 1.5rem; }
+    .logo-tag { display: none; }
   }
 </style>
 <link id="gfont-Ubuntu" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;600;700&amp;display=swap">
@@ -1267,7 +1327,10 @@
 
   <div class="hero-inner">
     <div class="hero-content">
-      <h1 class="hero-title">Conseil en Nutrition Animale Tropicale -Fabricant agréé</h1>
+      <h1 class="hero-title">
+        <span class="hero-line">Consulting en <span class="accent">Nutrition Animale</span> et en <span class="accent">Formulation</span></span>
+        <span class="hero-line hero-line--alt">Fabrication d'aliments composés</span>
+      </h1>
       <p class="hero-sub">Formulations nutritionnelles sur mesure à partir de matières premières locales. Nos spécialistes se déplacent dans toutes les milieux tropicaux et équatoriaux du monde pour accompagner les éleveurs et développer des solutions adaptées à chaque besoin.</p>
       <div class="hero-cta-row">
         <a href="#contact" class="btn btn-primary">Demander un diagnostic gratuit <i class="ti ti-arrow-right"></i></a>
@@ -1368,7 +1431,7 @@
       <div class="approche-col reveal">
         <div class="approche-icon"><i class="ti ti-recycle"></i></div>
         <h3>Production locale &amp; durable</h3>
-        <p>Exemple de Matières premières sourcées directement dans les zones d'intervention, pour des formulations compétitives.</p>
+        <p>Exemple de Matières premières recensées directement dans les zones d'intervention, pour des formulations compétitives.</p>
         <div class="approche-tags">
           <span class="approche-chip"><i class="ti ti-plant-2"></i> Maïs</span>
           <span class="approche-chip"><i class="ti ti-seeding"></i> Manioc</span>
@@ -1434,6 +1497,13 @@
         <p>Accompagnement régulier sur site. Indicateurs zootechniques, ajustements de rations et conseils vétérinaires nutritionnels au plus près des élevages.</p>
         <a href="#contact" class="more">En savoir plus <i class="ti ti-arrow-right"></i></a>
       </article>
+
+      <article class="service-card reveal" data-accent="green">
+        <div class="service-icon"><i class="ti ti-plant-2"></i></div>
+        <h3>Suivi Agricole</h3>
+        <p>Mise en place des périmètres agricoles destinés à l'alimentation animale (culture de maïs, maralfalfa, ...).</p>
+        <a href="#contact" class="more">En savoir plus <i class="ti ti-arrow-right"></i></a>
+      </article>
     </div>
   </div>
 </section>
@@ -1494,11 +1564,7 @@ Inventaire des matières premières disponibles localement</p>
           <span class="flag flag-ci"><span></span><span></span><span></span></span>
           <span class="mission-country">Côte d'Ivoire</span>
         </div>
-        <h3>Audit nutritionnel filière avicole</h3>
-        <div class="mission-result">
-          <i class="ti ti-trending-up"></i>
-          <span>+18% d'indice de conversion en 90 jours</span>
-        </div>
+        <h3>Audit nutritionnel de la filière avicole</h3>
       </article>
 
       <article class="mission-card reveal">
@@ -1506,11 +1572,7 @@ Inventaire des matières premières disponibles localement</p>
           <span class="flag flag-ml"><span></span><span></span><span></span></span>
           <span class="mission-country">Mali</span>
         </div>
-        <h3>Formulation provendes locales porcines</h3>
-        <div class="mission-result">
-          <i class="ti ti-coin"></i>
-          <span>Coût ration réduit de 23% à qualité équivalente</span>
-        </div>
+        <h3>Formulation provendes locales destinées à la pisciculture et renforcement des capacités</h3>
       </article>
 
       <article class="mission-card reveal">
@@ -1518,11 +1580,7 @@ Inventaire des matières premières disponibles localement</p>
           <span class="flag flag-ga horizontal"><span></span><span></span><span></span></span>
           <span class="mission-country">Gabon</span>
         </div>
-        <h3>Formation techniciens élevage</h3>
-        <div class="mission-result">
-          <i class="ti ti-certificate"></i>
-          <span>12 techniciens certifiés, 3 élevages autonomes</span>
-        </div>
+        <h3>Formulation provendes locales pour bovins, porcs, volailles, ...</h3>
       </article>
     </div>
   </div>
@@ -1550,10 +1608,11 @@ Inventaire des matières premières disponibles localement</p>
         <p class="profil-lead">« La performance d'un élevage tropical commence par une science rigoureuse, adaptée aux réalités locales. »</p>
         <div class="timeline">
           <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-date">1984</div><p>PhD en Sciences Avicoles et Nutrition — Université de Géorgie, Athens (USA).</p></div></div>
-          <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-date">1985 – 1992</div><p>Enseignant-chercheur — École Nationale d'Agronomie de Côte d'Ivoire.</p></div></div>
-          <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-date">1992 – 2019</div><p>Professeur — Université de Guam. Productions animales &amp; agriculture durable.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-date">1985 – 1992</div><p>Maître de Conférences — École Nationale Supérieure d'Agronomie (ENSA) - CIV.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-date">1992 – 2019</div><p>Professeur — Université de Guam (USA). Productions animales &amp; agriculture durable.</p></div></div>
         </div>
         <div class="creds">
+          <span class="cred"><i class="ti ti-world"></i> Nombreuses consultances internationales — Amérique, Asie &amp; Océanie</span>
           <span class="cred"><i class="ti ti-book"></i> Auteur — Tropical Layer Chicken Management Guide</span>
           <span class="cred"><i class="ti ti-file-text"></i> Auteur de plusieurs publications dans des journaux scientifiques internationaux</span>
         </div>
@@ -1581,11 +1640,11 @@ Inventaire des matières premières disponibles localement</p>
           <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-date">2020 – présent</div><p>Consultant Indépendant — Missions en Côte d'Ivoire, Mali, Burkina Faso et Gabon...</p></div></div>
         </div>
         <div class="creds">
-          <span class="cred"><i class="ti ti-certificate"></i> Certificate in Poultry Sciences — University of Guam (2013)</span>
-          <span class="cred"><i class="ti ti-school"></i> DESS Gestion de Projets — Université de Cocody (2006)</span>
+          <span class="cred"><i class="ti ti-certificate"></i> Certificate in Poultry Sciences — University of Guam (USA) (2013)</span>
+          <span class="cred"><i class="ti ti-school"></i> DESS Gestion de Projets (2006)</span>
         </div>
         <div class="expert-meta">
-          <div class="meta-block"><div class="meta-label">Langues</div><div class="meta-value">Français · Anglais courant</div></div>
+          <div class="meta-block"><div class="meta-label">Langues</div><div class="meta-value">Français · Anglais</div></div>
           <div class="meta-block"><div class="meta-label">Outils</div><div class="meta-value">Logiciels de formulation</div></div>
         </div>
       </article>
@@ -1619,7 +1678,7 @@ Inventaire des matières premières disponibles localement</p>
           <span class="badge"><i class="ti ti-star-filled"></i> Expert institutionnel</span>
         </div>
         <h3 class="profil-name">KOUDOU Diebeh Pierre</h3>
-        <p class="profil-title">Ingénieur Agronome Zootechnicien — Sous-Directeur Nutrition Animale &amp; Agrostologie (DNAGEP)</p>
+        <p class="profil-title">Ingénieur Agronome Zootechnicien — Expert en Production Animale et Végétale</p>
         <p class="profil-lead">« Une nutrition animale maîtrisée et une bonne gestion de l'espace pastoral sont les piliers d'un élevage durable. »</p>
         <div class="timeline">
           <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-date">2010</div><p>Diplôme d'État d'Ingénieur Agronome &amp; DAA option Zootechnie — ESA / INP-HB de Yamoussoukro.</p></div></div>
@@ -1631,6 +1690,11 @@ Inventaire des matières premières disponibles localement</p>
           <span class="profil-tag">Agrostologie</span>
           <span class="profil-tag">Espace pastoral</span>
           <span class="profil-tag">Productions animales</span>
+          <span class="profil-tag">Expérimentation zootechnique et agricole</span>
+          <span class="profil-tag">Analyse économique et financière des projets</span>
+          <span class="profil-tag">Cultures maraîchères et vivrières</span>
+          <span class="profil-tag">Irrigation goutte à goutte, micro-aspersion et aspersion</span>
+          <span class="profil-tag">Techniques de compostage</span>
         </div>
       </article>
 
